@@ -1,0 +1,271 @@
+body{
+    overflow:hidden;
+}
+
+#body-wrapper{
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    align-content: stretch; 
+    top: 5rem;
+    left: 0;
+    width: 100vw;
+    height: calc(100vh - 10rem);
+    overflow: scroll;
+    background-color: blue;
+}
+
+.flexbox{
+    display: flex;
+    flex-direction: column;
+}
+
+#title-block{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 50%;
+    background-color: red;
+    z-index: 1;
+}
+
+nav {
+    top: 0;
+    left: 0;
+}
+
+
+.menu-block{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    width: 100vw;
+    height: 5rem;
+    z-index:2;
+    background-color: pink;
+}
+
+.menu-wrapper{
+    display:flex;
+    position:relative;
+    padding: 0 2rem;
+    align-items: center;
+    height: 65%;
+    max-height:4rem;
+    width: 100%;
+    background-color:orange;
+    z-index: 3;
+}
+
+footer{
+    position: relative;
+    display:flex;
+    align-items: center;
+    bottom: 0;
+    left: 0;
+}
+
+footer.mobile{
+    display:none;
+}
+
+#slide-controls{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 3;
+}
+
+.project{
+    position: absolute;
+    display:flex;
+    flex-direction: column;
+    left: 0;
+    width: auto;
+    height: auto;
+    background-color: yellow;
+}
+
+#project-track{
+    display:none;
+}
+
+.flex-wrapper{
+    display:flex;
+    width: 100vw;
+    height: 100vh;
+}
+
+.center{
+    align-items: center;
+}
+
+.content-wrapper{
+    padding: 0 2rem;
+}
+
+#cover{
+    display: flex;
+    width: 100vw;
+    height: 50%;
+    background-color: green;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+}
+
+.project-content{
+    position: absolute;
+    top:100%;
+    display: flex;
+    width: 100vw;
+    height: auto;
+    background-color: grey;
+}
+
+.project-content .content-wrapper{
+    padding: 5rem 2rem;
+    background-color: #fff;
+    overflow-x: scroll;
+}
+
+.image{
+    position: relative;
+    display: block;
+    height: 100%;
+    width: auto;
+}
+
+/* ----------- HORIZONTAL QUERIES  ----------- */
+
+/* ----------------- Tablet  ----------------- */
+
+@media screen and (min-width:44em) {
+
+    #title-block{
+        width: 50vw;
+        height: 100vh;
+    }
+    
+    .menu-block{
+        width: 50vw;
+    }
+    
+    #body-wrapper{
+        overflow: hidden;
+    }
+    
+    #flexbox{
+        flex-direction: row;
+    }
+    
+    footer.mobile{
+        display: flex;
+        z-index:2;
+    }
+    
+    #slide-controls{
+        display:none;
+    }
+    
+    .project{
+        margin-top:0;
+    }
+    
+    #cover{
+        width: 50vw;
+        height: 100vh;
+        top: 0;
+    }
+    
+    #project-track{
+        display: flex;
+        align-content: stretch;
+        position: absolute;
+        top: 5rem;
+        right: 0;
+        width: 1rem;
+        height:calc(100vh - 10rem);
+        top: 12.5vh;
+        z-index: 10;
+        background-color: yellow;
+        
+    }
+    
+    .project-content{
+        bottom:0rem;
+    }
+
+}
+
+/* ---------------- Desktop ------------------ */
+
+@media screen and (min-width:64em) {
+    
+    .menu-block{
+        width:35vw;
+    }
+    
+    #title-block{
+        width:35vw;
+    }
+    
+    #cover{
+        width:65vw;
+    }
+    
+}
+
+/* ----------- VERTICAL QUERIES  ----------- */
+
+@media screen and (min-height:40em) {
+
+    .menu-block{
+        height: 6rem;
+    }
+    
+    #body-wrapper{
+        top: 6rem;
+        height: calc(100vh - 12rem);
+    }
+    
+    #project-track{
+        top: 6rem;
+        height: calc(100vh - 12rem);
+    }
+}
+
+@media screen and (min-height:60em) {
+
+    .menu-block{
+        height: 8rem;
+    }
+    
+    #body-wrapper{
+        top: 8rem;
+        height: calc(100vh - 16rem);
+    }
+    
+    #project-track{
+        top: 8rem;
+        height: calc(100vh - 16rem);
+    }
+    
+}
+
+@media screen and (min-height:40em) and (min-width:44em) {
+    #body-wrapper{
+        top: 0;
+        height: 100vh;
+    }
+}
+
+@media screen and (min-height:60em) and (min-width:44em) {
+    #body-wrapper{
+        top: 0;
+        height: 100vh;
+    }
+}
