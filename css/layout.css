@@ -1,5 +1,5 @@
 body{
-    overflow:hidden;
+    overflow: scroll;
 }
 
 #body-wrapper{
@@ -266,6 +266,11 @@ footer.mobile{
 /* ---------------- Desktop ------------------ */
 
 @media screen and (min-width:64em) {
+    
+    body{
+        overflow: hidden;
+    }
+
     
     .menu-block{
         width:35vw;
