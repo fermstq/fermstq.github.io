@@ -1,12 +1,20 @@
+* {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
 #body-wrapper{
     position: absolute;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-content: stretch; 
-    top: 5rem;
+    top: 4rem;
     left: 0;
     width: 100vw;
-    height: calc(100vh - 10rem);
+    height: calc(100vh - 8rem);
 }
 
 .flexbox{
@@ -16,6 +24,9 @@
 
 #title-block{
     position: relative;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
     flex-direction: column;
     top: 0;
@@ -33,6 +44,9 @@ nav {
 }
 
 button#menu{
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
     align-self: flex-end;
     background-color: grey;
@@ -43,12 +57,15 @@ button#menu{
 
 
 .menu-block{
-    position: absolute;
+    position: fixed;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 100vw;
-    height: 5rem;
+    height: 4rem;
     z-index:2;
     background-color: pink;
 }
@@ -112,6 +129,9 @@ footer.mobile{
 }
 
 #cover{
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
     width: 100vw;
     height: 50%;
@@ -136,6 +156,9 @@ footer.mobile{
 .project-content{
     position: absolute;
     top:50%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
     width: 100vw;
     height: auto;
@@ -144,6 +167,9 @@ footer.mobile{
 .project-content .content-wrapper{
     padding: 5rem 2rem;
     background-color: white;
+    display: block;
+    height: auto;
+    position: relative;
 }
 
 .image{
@@ -160,7 +186,7 @@ footer.mobile{
 @media screen and (min-width:44em) {
  
     body{
-        overflow: scroll;
+        overflow: hidden;
     }
     
     nav{
@@ -172,12 +198,16 @@ footer.mobile{
         flex-direction: row;
         top: 0;
         height: 100vh;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        will-change: overflow;
     }
     
     #title-block{
         width: 50vw;
         height: 100vh;
         background-color: white;
+        overflow-y: hidden;
     }
     
     .menu-block{
@@ -189,6 +219,9 @@ footer.mobile{
     }
     
     footer.mobile{
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
         display: flex;
         z-index:2;
     }
@@ -239,6 +272,9 @@ footer.mobile{
     }
     
     #project-track{
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
         display: flex;
         align-content: stretch;
         position: absolute;
@@ -253,12 +289,12 @@ footer.mobile{
     }
     
     .project-content{
-        bottom: 0rem;
         top: 0;
         left:100vw;
         width: 50vw;
-        overflow: scroll;
-        -webkit-overflow-scrolling: touch;
+        height: auto;
+        min-height: fit-content;
+        overflow-y: scroll;
         -webkit-transition: left 400ms cubic-bezier(0.645, 0.045, 0.355, 1);
         -moz-transition: left 400ms cubic-bezier(0.645, 0.045, 0.355, 1);
         -ms-transition: left 400ms cubic-bezier(0.645, 0.045, 0.355, 1);
