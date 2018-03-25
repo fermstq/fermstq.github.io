@@ -7,8 +7,6 @@
     left: 0;
     width: 100vw;
     height: calc(100vh - 10rem);
-    overflow-y: scroll;
-    -webkit-overflow-scrolling: touch;
 }
 
 .flexbox{
@@ -29,6 +27,7 @@
 }
 
 nav {
+    position: fixed;
     top: 0;
     left: 0;
 }
@@ -79,7 +78,7 @@ footer.mobile{
 }
 
 #slide-controls{
-    position: absolute;
+    position: fixed;
     bottom: 0;
     left: 0;
     z-index: 3;
@@ -145,8 +144,6 @@ footer.mobile{
 .project-content .content-wrapper{
     padding: 5rem 2rem;
     background-color: white;
-    overflow-y: scroll;
-    -webkit-overflow-scrolling: touch;
 }
 
 .image{
@@ -156,12 +153,27 @@ footer.mobile{
     width: auto;
 }
 
-/* ----------- HORIZONTAL QUERIES  ----------- */
+/* ----------- MEDIA QUERIES  ----------- */
 
 /* ----------------- Tablet  ----------------- */
 
 @media screen and (min-width:44em) {
-
+ 
+    body{
+        overflow: scroll;
+    }
+    
+    nav{
+        position: absolute;
+    }
+    
+    #body-wrapper{
+        overflow: hidden;
+        flex-direction: row;
+        top: 0;
+        height: 100vh;
+    }
+    
     #title-block{
         width: 50vw;
         height: 100vh;
@@ -170,13 +182,6 @@ footer.mobile{
     
     .menu-block{
         width: 50vw;
-    }
-    
-    #body-wrapper{
-        overflow: hidden;
-        flex-direction: row;
-        top: 0;
-        height: 100vh;
     }
     
     #flexbox{
@@ -252,6 +257,8 @@ footer.mobile{
         top: 0;
         left:100vw;
         width: 50vw;
+        overflow: scroll;
+        -webkit-overflow-scrolling: touch;
         -webkit-transition: left 400ms cubic-bezier(0.645, 0.045, 0.355, 1);
         -moz-transition: left 400ms cubic-bezier(0.645, 0.045, 0.355, 1);
         -ms-transition: left 400ms cubic-bezier(0.645, 0.045, 0.355, 1);
@@ -262,6 +269,8 @@ footer.mobile{
     .project-content.active {
         left: 50vw;
     }
+    
+    /* --------- Nested Vertial Media Queries ---------- */
     
     @media screen and (min-height:40em) {
         
@@ -294,11 +303,7 @@ footer.mobile{
 
 @media screen and (min-width:64em) {
     
-    body{
-        overflow: hidden;
-    }
 
-    
     .menu-block{
         width: 35vw;
     }
@@ -325,54 +330,3 @@ footer.mobile{
     }
     
 }
-
-/* ----------- VERTICAL QUERIES  ----------- 
-
-@media screen and (min-height:40em) {
-
-    .menu-block{
-        height: 6rem;
-    }
-    
-    #body-wrapper{
-        top: 6rem;
-        height: calc(100vh - 12rem);
-    }
-    
-    #project-track{
-        top: 6rem;
-        height: calc(100vh - 12rem);
-    }
-}
-
-@media screen and (min-height:60em) {
-
-    .menu-block{
-        height: 8rem;
-    }
-    
-    #body-wrapper{
-        top: 8rem;
-        height: calc(100vh - 16rem);
-    }
-    
-    #project-track{
-        top: 8rem;
-        height: calc(100vh - 16rem);
-    }
-    
-}
-
-@media screen and (min-height:40em) and (min-width:44em) {
-    #body-wrapper{
-        top: 0;
-        height: 100vh;
-    }
-}
-
-@media screen and (min-height:60em) and (min-width:44em) {
-    #body-wrapper{
-        top: 0;
-        height: 100vh;
-    }
-}*/
