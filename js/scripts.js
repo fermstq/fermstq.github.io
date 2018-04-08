@@ -6,6 +6,11 @@ $(document).ready(function() {
             $('.project-content').toggleClass('active');
     }); 
     
+    $('#menu-button').click (function(e) {
+            e.preventDefault();
+            $('#main-menu').toggleClass ('active');
+    }); 
+    
     /* $('#project-button').click (function(e) {
             e.preventDefault();
             $('#cover').addClass ('animate');
