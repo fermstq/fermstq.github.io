@@ -1,15 +1,18 @@
 $(document).ready(function() {
     
-    $('#project-button').click (function(e) {
+    $('.project-button').click (function(e) {
             e.preventDefault();
-            $('#cover').toggleClass ('active');
+            $('.cover').toggleClass ('active');
             $('.project-content').toggleClass('active');
     }); 
     
     $('#menu-button').click (function(e) {
             e.preventDefault();
             $('#main-menu').toggleClass ('active');
+            $('#footer').toggleClass ('active');
     }); 
+    
+    
     
     /* $('#project-button').click (function(e) {
             e.preventDefault();

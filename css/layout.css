@@ -41,11 +41,22 @@ button#menu-button{
     position:relative;
     margin: 0 2rem;
     align-items: center;
+    justify-content: space-between;
     height: 65%;
     max-height:4rem;
     width: 100%;
     background-color:orange;
     z-index: 3;
+}
+
+.menu-block-left{
+    position: relative;
+    display: flex;
+}
+
+.menu-block-right{
+    position: relative;
+    display: flex;
 }
 
 /* -- Menu Slide In -- */
@@ -75,11 +86,22 @@ button#menu-button{
     z-index: 100;
 }
 
-.project-menu-select{
-    color: #fff;
+#main-menu .project-menu-select{
+    display:flex;
+    align-content: center;
     height: 10%;
     width: 100%;
-    display: block;
+}
+
+#main-menu .project-menu-select .content-wrapper{
+    height: auto;
+    align-self: center;
+    display: flex;
+    height: auto;
+}
+
+.project-menu-select{
+    color: #fff;
 }
 
 /* -- Project Title Area -- */
@@ -99,7 +121,16 @@ button#menu-button{
     height: calc(100vh - 8rem);
 }
 
-#title-block{
+#title-flex-wrapper{
+    display: flex;
+    overflow: hidden;
+    flex-direction: row;
+    width: 100vw;
+    flex-wrap: nowrap;
+    height: 50%;
+}
+
+.title-block{
     position: relative;
     display: -webkit-box;
     display: -webkit-flex;
@@ -109,21 +140,30 @@ button#menu-button{
     top: 0;
     left: 0;
     width: 100vw;
-    height: 50%;
     background-color: transparent;
     z-index: 1;
 }
 
-footer{
-    position: relative;
-    display:flex;
-    align-items: center;
+#footer{
+    position: fixed;
+    width: 100vw;
+    right: 100%;
     bottom: 0;
-    left: 0;
+    -webkit-transition: right 400ms cubic-bezier(0.645, 0.045, 0.355, 1);
+    -moz-transition: right 400ms cubic-bezier(0.645, 0.045, 0.355, 1);
+    -ms-transition: right 400ms cubic-bezier(0.645, 0.045, 0.355, 1);
+    -o-transition: right 400ms cubic-bezier(0.645, 0.045, 0.355, 1);
+    transition: right 400ms cubic-bezier(0.645, 0.045, 0.355, 1);
+    z-index: 150;
 }
 
-footer.mobile{
-    display:none;
+#footer.active{
+    right: 0;
+    -webkit-transition: right 400ms cubic-bezier(0.645, 0.045, 0.355, 1);
+    -moz-transition: right 400ms cubic-bezier(0.645, 0.045, 0.355, 1);
+    -ms-transition: right 400ms cubic-bezier(0.645, 0.045, 0.355, 1);
+    -o-transition: right 400ms cubic-bezier(0.645, 0.045, 0.355, 1);
+    transition: right 400ms cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
 #slide-controls{
@@ -160,7 +200,7 @@ footer.mobile{
     padding: 0 2rem;
 }
 
-#cover{
+.cover{
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -173,7 +213,7 @@ footer.mobile{
     position: absolute;
 }
 
-#project-button{
+.project-button{
     display: none;
     position: relative;
     top: 75%;
@@ -239,9 +279,16 @@ footer.mobile{
         will-change: overflow;
     }
     
-    #title-block{
+    #title-flex-wrapper{
+        flex-direction: column;
+        height: 100vh;
+    }
+    
+    .title-block{
+        display: block;
         width: 50vw;
         height: 100vh;
+        position: fixed;
         background-color: white;
         overflow-y: hidden;
     }
@@ -286,7 +333,7 @@ footer.mobile{
         overflow: scroll;
     }
     
-    #cover{
+    .cover{
         width: 50vw;
         height: 100vh;
         top: 0;
@@ -297,11 +344,11 @@ footer.mobile{
         transition: right 400ms cubic-bezier(0.645, 0.045, 0.355, 1);
     }
     
-    #cover.active{
-        right: 65%;
+    .cover.active{
+        right: 50%;
     }
     
-    #project-button{
+    .project-button{
         display: block;
         position: absolute;
         top: calc(50vh - 2rem);
@@ -318,9 +365,8 @@ footer.mobile{
         transition: left 400ms cubic-bezier(0.645, 0.045, 0.355, 1);
     }
     
-    #cover.active #project-button{
-        position: absolute;
-        left: 100%;
+    .cover.active .project-button{
+        left: calc(100% - 6.75rem);
     }
     
     #project-track{
@@ -331,7 +377,7 @@ footer.mobile{
         align-content: stretch;
         position: absolute;
         top: 5rem;
-        right: 0;
+        left: calc(50vw - 0.75rem);
         width: 0.75rem;
         height:calc(100vh - 5rem);
         top: 5vh;
@@ -356,6 +402,25 @@ footer.mobile{
     
     .project-content.active {
         left: 50%;
+    }
+    
+    footer{
+        position: relative;
+        display:flex;
+        align-items: center;
+        bottom: 0;
+        left: 0;
+    }
+    
+    #footer{
+        position: absolute;
+        width: 50vw;
+        left: 0;
+        bottom: 0;
+    }
+
+    #footer.active{
+        right: 0;
     }
     
     /* --------- Nested Vertial Media Queries ---------- */
@@ -399,12 +464,16 @@ footer.mobile{
         right: 65%;
     }
     
-    #title-block{
+    .title-block{
         width: 35vw;
     }
     
-    #cover{
+    .cover{
         width:65vw;
+    }
+    
+    .cover.active{
+        right: 65%;
     }
     
     .project-content{
@@ -415,9 +484,12 @@ footer.mobile{
         left: 35vw;
     }
     
-    #cover.active #project-button{
-        position: absolute;
-        left: calc(100% - 8rem);
+    #footer{
+        width: 35vw;
+    }
+    
+    #project-track{
+        left: calc(35vw - 0.75rem);
     }
     
     
