@@ -3,7 +3,6 @@
     box-sizing: border-box;
 }
 
-
 /* -- Navigation Bar -- */
 
 nav {
@@ -46,7 +45,7 @@ button#menu-button{
     max-height:4rem;
     width: 100%;
     background-color:orange;
-    z-index: 3;
+    /*z-index: 3;*/
 }
 
 .menu-block-left{
@@ -104,6 +103,21 @@ button#menu-button{
     color: #fff;
 }
 
+/* -- Projects --*/
+
+.project{
+    height: 100vh;
+    position: relative;
+}
+
+#project-one{
+    top: 100vh;
+}
+
+#project-two{
+    top: 200vh
+}
+
 /* -- Project Title Area -- */
 
 #body-wrapper{
@@ -121,7 +135,7 @@ button#menu-button{
     height: calc(100vh - 8rem);
 }
 
-#title-flex-wrapper{
+.title-flex-wrapper{
     display: flex;
     overflow: hidden;
     flex-direction: row;
@@ -154,7 +168,6 @@ button#menu-button{
     -ms-transition: right 400ms cubic-bezier(0.645, 0.045, 0.355, 1);
     -o-transition: right 400ms cubic-bezier(0.645, 0.045, 0.355, 1);
     transition: right 400ms cubic-bezier(0.645, 0.045, 0.355, 1);
-    z-index: 150;
 }
 
 #footer.active{
@@ -173,7 +186,7 @@ button#menu-button{
     z-index: 3;
 }
 
-.project{
+.project-title{
     position: absolute;
     display:flex;
     flex-direction: column;
@@ -207,7 +220,7 @@ button#menu-button{
     display: flex;
     width: 100vw;
     height: 50%;
-    background-color: green;
+    background-color: blue;
     right: 0;
     top: 0;
     position: absolute;
@@ -235,6 +248,8 @@ button#menu-button{
     overflow: scroll;
     width: 100vw;
     height: auto;
+    
+    scroll-behavior: smooth;
 }
 
 .project-content .content-wrapper{
