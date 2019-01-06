@@ -1,4 +1,4 @@
-*, *:after, *:before { -webkit-box-sizing: border-box; box-sizing: border-box; }
+*, *:after, *:before { -webkit-project-teaser-sizing: border-project-teaser; project-teaser-sizing: border-project-teaser; }
 .clearfix:before, .clearfix:after { content: ''; display: table; }
 .clearfix:after { clear: both; }
 
@@ -44,24 +44,20 @@
 
 .header .logo svg {
 	position: absolute;
-	min-height: 300px;
+	min-height: 250px;
 	height: 25%;
 }
 
 .loaded .header .logo svg {
-	max-height: 300px;
+	max-height: 250px;
 }
 
 .header .logo svg path.logo-stroke{
 	fill: #221F1F;
 }
 
-.header .logo svg .loadbar-bg{
-	fill: #ddd;
-}
-
 .header .logo svg .loadbar{
-	fill: #ddd;
+	fill: #89da90;
 }
 
 .header .logo svg .logo-pop{
@@ -111,61 +107,24 @@
 	line-height: 1;
 }
 
-.browser {
+.intro-container {
 	margin: 0 auto;
 	padding-top: 8%;
 	min-height: 400px;
 	max-width: 1000px;
 	width: 100%;
 	border-radius: 8px;
-	background: #fff url(../img/browser.png) no-repeat 50% 0;
+	background: #f1f1f1;
 	background-size: 100%;
 	color: #d3d3d3;
 }
 
-.box {
+.project-teaser {
 	float: left;
 	padding: 3.5em;
 	width: 33.3%;
 	font-size: 0.7em;
 	line-height: 1.5;
-}
-
-.box p {
-	font-family: 'Blokk', Arial, sans-serif;
-}
-
-[class^="icon-"]::before, 
-[class*=" icon-"]::before {
-	display: block;
-	margin-bottom: 0.5em;
-	padding: 0.5em;
-	border-radius: 5px;
-	background: #dfdfdf;
-	color: #fff;
-	text-align: center;
-	text-transform: none;
-	font-weight: normal;
-	font-style: normal;
-	font-variant: normal;
-	font-size: 5em;
-	font-family: 'feather';
-	line-height: 1;
-	speak: none;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-}
-
-.icon-bell:before {
-	content: "\e006";
-}
-
-.icon-cog:before {
-	content: "\e023";
-}
-
-.icon-heart:before {
-	content: "\e024";
 }
 
 /* Animations */
@@ -216,11 +175,11 @@
 }
 
 @-webkit-keyframes animLoadedLogo {
-	to { -webkit-transform: translate3d(0,100%,0) translate3d(0,50px,0) scale3d(0.65,0.65,1); }
+	to { -webkit-transform: translate3d(0,100%,0) translate3d(0,50px,0) scale3d(0.4,0.4,1); }
 }
 
 @keyframes animLoadedLogo {
-	to { -webkit-transform: translate3d(0,100%,0) translate3d(0,50px,0) scale3d(0.65,0.65,1); transform: translate3d(0,100%,0) translate3d(0,50px,0) scale3d(0.65,0.65,1); }
+	to { -webkit-transform: translate3d(0,100%,0) translate3d(0,50px,0) scale3d(0.4,0.4,1); transform: translate3d(0,100%,0) translate3d(0,50px,0) scale3d(0.4,0.4,1); }
 }
 
 .loaded .loader {
@@ -255,6 +214,7 @@
 	fill: #89da90;
 }
 
+
 .loaded .logo svg .logo-heading{
 	fill: rgba(255, 255, 255, 0);
 }
@@ -280,28 +240,28 @@
 
 /* Content animations */
 .loaded .intro h2,
-.loaded .intro .browser,
-.loaded .intro .browser .box,
+.loaded .intro .intro-container,
+.loaded .intro .intro-container .project-teaser,
 .loaded .codrops-demos {
 	-webkit-animation: animLoadedContent 1s cubic-bezier(0.7,0,0.3,1) both;
 	animation: animLoadedContent 1s cubic-bezier(0.7,0,0.3,1) both;
 }
 
 .loaded .intro h2,
-.loaded .intro .browser .box:first-child {
-	-webkit-animation-delay: 0.1s;
-	animation-delay: 0.1s;
-}
-
-.loaded .codrops-demos,
-.loaded .intro .browser .box:nth-child(2) {
+.loaded .intro .intro-container .project-teaser:first-child {
 	-webkit-animation-delay: 0.15s;
 	animation-delay: 0.15s;
 }
 
-.loaded .intro .browser .box:nth-child(3) {
-	-webkit-animation-delay: 0.2s;
-	animation-delay: 0.2s;
+.loaded .codrops-demos,
+.loaded .intro .intro-container .project-teaser:nth-child(2) {
+	-webkit-animation-delay: 0.15s;
+	animation-delay: 0.15s;
+}
+
+.loaded .intro .intro-container .project-teaser:nth-child(3) {
+	-webkit-animation-delay: 0.15s;
+	animation-delay: 0.15s;
 }
 
 @-webkit-keyframes animLoadedContent {
@@ -313,7 +273,7 @@
 }
 
 /* Change layout class for header */
-.layout-switch .header {
+.loading-complete .header {
 	position: absolute;
 }
 
@@ -344,7 +304,7 @@
 		font-size: 10vw;
 	}
 
-	.box {
+	.project-teaser {
 		width: 100%%;
 	}
 

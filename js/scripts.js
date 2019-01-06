@@ -36,7 +36,7 @@
 		var simulationFn = function(instance) {
 			var progress = 0,
 				interval = setInterval( function() {
-					progress = Math.min( progress + Math.random() * 0.1, 1 );
+					progress = Math.min( progress + Math.random() * 0.15, 1 );
 
 					instance.setProgress( progress );
 
@@ -52,7 +52,7 @@
 								this.removeEventListener( animEndEventName, onEndHeaderAnimation );
 							}
 
-							classie.add( document.body, 'layout-switch' );
+							classie.add( document.body, 'loading-complete' );
 							window.removeEventListener( 'scroll', noscroll );
 						};
 
@@ -98,30 +98,5 @@ $(document).ready(function() {
             $('#container').toggleClass ('hide');
             $('#main').toggleClass ('view');
     }); 
-
-    
-    
-    /* $('#project-button').click (function(e) {
-            e.preventDefault();
-            $('#cover').addClass ('animate');
-            $('.project-content').addClass('animate');
-            $('#cover').toggleClass ('active');
-            $('.project-content').toggleClass('active');
-            $('#cover').removeClass ('animate');
-            $('.project-content').removeClass('animate');
-    }); */
-            
-    
-    /* $('#project-button').click (function(e) {
-            e.preventDefault();
-            if ($('#cover').hasClass ('active')) { 
-                    $('#cover').removeClass ('active');
-                    $('.project-content').removeClass('active');
-
-            } else { 
-                $('#cover').addClass ('active');
-                $('.project-content').addClass('active');
-            }
-    }); */
     
 }); 
