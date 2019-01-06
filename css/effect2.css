@@ -29,8 +29,8 @@
 .logo {
 	top: 0;
 	height: 100%;
-	-webkit-transform: translate3d(0,35%,0);
-	transform: translate3d(0,35%,0);
+	-webkit-transform: translate3d(0,25%,0);
+	transform: translate3d(0,25%,0);
 }
 
 .loader {
@@ -56,6 +56,14 @@
 	fill: #221F1F;
 }
 
+.header .logo svg .loadbar-bg{
+	fill: #ddd;
+}
+
+.header .logo svg .loadbar{
+	fill: #ddd;
+}
+
 .header .logo svg .logo-pop{
 	fill: #89da90;
 }
@@ -78,43 +86,22 @@
 }
 
 .header .loader svg path.loader-circle {
-	-webkit-transition: stroke-dashoffset 0.2s;
-	transition: stroke-dashoffset 0.2s;
+	-webkit-transition: stroke-dashoffset 0.1s;
+	transition: stroke-dashoffset 0.1s;
 	stroke: #89da90;
 }
 
-.header svg path#loadbar-bg {
-	fill: #fff;
-}
-
-.header svg path.#loadbar {
-	-webkit-animation: slide 8s;
-	animation: slide 8s;
-	fill: #89da90;
-}
-
-@keyframes slide {
-  from {
-    transform: translateY(-135px);
-  }
-  50% {
-    transform: translateY(-5px);
-  }
-  to {
-    transform: translateY(-135px);
-  }
-}
-
 /* Content */
-.main {
-	overflow: hidden;
+.intro {
 	margin: 0 auto;
 	padding: 160px 0 10em 0;
-	max-width: 1100px;
-	width: 90%;
+    height: 100vh;
+	width: 100vw;
+    z-index: 1000;
+    background-color: #fff;
 }
 
-.main h2 {
+.intro h2 {
 	margin: 0;
 	padding: 0.5em 0 1em;
 	color: #1c9ccd;
@@ -264,6 +251,10 @@
 	fill: #89da90;
 }
 
+.loaded .logo svg .loadbar{
+	fill: #89da90;
+}
+
 .loaded .logo svg .logo-heading{
 	fill: rgba(255, 255, 255, 0);
 }
@@ -288,27 +279,27 @@
 }
 
 /* Content animations */
-.loaded .main h2,
-.loaded .main .browser,
-.loaded .main .browser .box,
+.loaded .intro h2,
+.loaded .intro .browser,
+.loaded .intro .browser .box,
 .loaded .codrops-demos {
 	-webkit-animation: animLoadedContent 1s cubic-bezier(0.7,0,0.3,1) both;
 	animation: animLoadedContent 1s cubic-bezier(0.7,0,0.3,1) both;
 }
 
-.loaded .main h2,
-.loaded .main .browser .box:first-child {
+.loaded .intro h2,
+.loaded .intro .browser .box:first-child {
 	-webkit-animation-delay: 0.1s;
 	animation-delay: 0.1s;
 }
 
 .loaded .codrops-demos,
-.loaded .main .browser .box:nth-child(2) {
+.loaded .intro .browser .box:nth-child(2) {
 	-webkit-animation-delay: 0.15s;
 	animation-delay: 0.15s;
 }
 
-.loaded .main .browser .box:nth-child(3) {
+.loaded .intro .browser .box:nth-child(3) {
 	-webkit-animation-delay: 0.2s;
 	animation-delay: 0.2s;
 }
@@ -348,7 +339,7 @@
 
 @media screen and (max-width: 45em) {
 
-	.main h2 {
+	.intro h2 {
 		font-size: 2.25em;
 		font-size: 10vw;
 	}

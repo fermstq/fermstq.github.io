@@ -3,6 +3,36 @@
     box-sizing: border-box;
 }
 
+/* -- Intro -- */
+
+#container{
+    display: block;
+    opacity: 1;
+    -webkit-transition: opacity 500ms;
+    -moz-transition: opacity 500ms;
+    -o-transition: opacity 500ms;
+    transition: opacity 500ms;
+}
+
+#container.hide{
+    display:none;
+    opacity: 0;
+}
+
+#main{
+    display:none;
+    opacity: 0;
+    -webkit-transition: opacity 500ms;
+    -moz-transition: opacity 500ms;
+    -o-transition: opacity 500ms;
+    transition: opacity 500ms;
+}
+
+#main.view{
+    display: block;
+    opacity: 1;
+}
+
 /* -- Navigation Bar -- */
 
 nav {
@@ -133,6 +163,7 @@ button#menu-button{
     overflow-x: hidden;
     width: 100vw;
     height: calc(100vh - 8rem);
+    z-index: -2;
 }
 
 .title-flex-wrapper{
@@ -281,7 +312,7 @@ button#menu-button{
     }
     
     nav{
-        position: absolute;
+        position: fixed;
     }
     
     #body-wrapper{
