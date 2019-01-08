@@ -14,6 +14,8 @@
 
 .header h1 {
 	margin: 0;
+    text-align: center;
+    width: 100%
 }
 
 .logo,
@@ -29,8 +31,13 @@
 .logo {
 	top: 0;
 	height: 100%;
+    width: auto;
 	-webkit-transform: translate3d(0,25%,0);
 	transform: translate3d(0,25%,0);
+}
+
+.loaded .logo{
+    left: 0;
 }
 
 .loader {
@@ -43,13 +50,9 @@
 }
 
 .header .logo svg {
-	position: absolute;
-	min-height: 250px;
+	position: relative;
 	height: 25%;
-}
-
-.loaded .header .logo svg {
-	max-height: 250px;
+    overflow: visible;
 }
 
 .header .logo svg path.logo-stroke{
@@ -161,6 +164,7 @@
 	from { opacity: 0; -webkit-transform: scale3d(0.5,0.5,1); transform: scale3d(0.5,0.5,1); }
 }
 
+
 /* Header elements when loading finishes */
 .loaded .logo,
 .loaded .loader {
@@ -194,6 +198,8 @@
 @keyframes animLoadedLoader {
 	to { opacity: 0; -webkit-transform: translate3d(0,-100%,0) scale3d(0.3,0.3,1); transform: translate3d(0,-100%,0) scale3d(0.3,0.3,1); }
 }
+
+
 
 /* Change the color of the logo */
 
@@ -238,7 +244,7 @@
 	to { -webkit-transform: translate3d(0,-100%,0); transform: translate3d(0,-100%,0); }
 }
 
-/* Content animations */
+/* Content animations 
 .loaded .intro h2,
 .loaded .intro .intro-container,
 .loaded .intro .intro-container .project-teaser,
@@ -248,18 +254,7 @@
 }
 
 .loaded .intro h2,
-.loaded .intro .intro-container .project-teaser:first-child {
-	-webkit-animation-delay: 0.15s;
-	animation-delay: 0.15s;
-}
-
-.loaded .codrops-demos,
-.loaded .intro .intro-container .project-teaser:nth-child(2) {
-	-webkit-animation-delay: 0.15s;
-	animation-delay: 0.15s;
-}
-
-.loaded .intro .intro-container .project-teaser:nth-child(3) {
+.loaded .intro .intro-container .project-teaser {
 	-webkit-animation-delay: 0.15s;
 	animation-delay: 0.15s;
 }
@@ -270,6 +265,22 @@
 
 @keyframes animLoadedContent {
 	from { opacity: 0; -webkit-transform: scale3d(0.3,0.3,1); transform: scale3d(0.3,0.3,1); }
+}*/
+
+/* Intro animation */
+
+.container.hide {
+    position: absolute;
+	-webkit-animation: animContainer 0.5s cubic-bezier(0.7,0,0.3,1) both;
+	animation: animContainer 0.5s cubic-bezier(0.7,0,0.3,1) both;
+}
+
+@-webkit-keyframes animContainer {
+	to { -webkit-transform: translate3d(-100%,0,0); }
+}
+
+@keyframes animContainer {
+	to { -webkit-transform: translate3d(-100%,0,0); transform: translate3d(-100%,0,0); }
 }
 
 /* Change layout class for header */

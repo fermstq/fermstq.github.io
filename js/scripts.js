@@ -93,10 +93,10 @@ $(document).ready(function() {
             $('#footer').toggleClass ('active');
     }); 
     
-    $('#view-projects').click (function(e) {
+    $('.intro-wipe').click (function(e) {
             e.preventDefault();
-            $('#container').toggleClass ('hide');
-            $('#main').toggleClass ('view');
+            $('#container').addClass ('hide');
+            $('#main').addClass ('view');
     }); 
     
 }); 

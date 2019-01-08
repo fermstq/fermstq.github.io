@@ -24,7 +24,7 @@
 }
 
 
-/* Content animations */
+/* Content animations 
 .loaded.hide .intro h2,
 .loaded.hide .intro .intro-container,
 .loaded.hide .intro .intro-container .project-teaser {
@@ -40,7 +40,7 @@
 
 @keyframes animExitIntro {
 	to { opacity: 0; -webkit-transform: scale3d(0.01,0.01,1); transform: scale3d(0.01,0.01,1); }
-}
+}*/
 
 /* -- Navigation Bar -- */
 
