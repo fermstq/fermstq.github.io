@@ -171,6 +171,7 @@
 	opacity: 1;
 }
 
+
 .loaded .logo {
 	-webkit-transform-origin: 50% 0;
 	transform-origin: 50% 0;
@@ -244,7 +245,7 @@
 	to { -webkit-transform: translate3d(0,-100%,0); transform: translate3d(0,-100%,0); }
 }
 
-/* Content animations 
+Content animations 
 .loaded .intro h2,
 .loaded .intro .intro-container,
 .loaded .intro .intro-container .project-teaser,
@@ -265,22 +266,39 @@
 
 @keyframes animLoadedContent {
 	from { opacity: 0; -webkit-transform: scale3d(0.3,0.3,1); transform: scale3d(0.3,0.3,1); }
-}*/
+}
 
 /* Intro animation */
 
 .container.hide {
     position: absolute;
-	-webkit-animation: animContainer 0.5s cubic-bezier(0.7,0,0.3,1) both;
-	animation: animContainer 0.5s cubic-bezier(0.7,0,0.3,1) both;
+    -webkit-animation-delay: 0.15s;
+	animation-delay: 0.15s;
+	-webkit-animation: animContainerOut 0.5s cubic-bezier(0.25,0.1,0.25,1) both;
+	animation: animContainerOut 0.5s cubic-bezier(0.25,0.1,0.25,1) both;
 }
 
-@-webkit-keyframes animContainer {
+@-webkit-keyframes animContainerOut {
 	to { -webkit-transform: translate3d(-100%,0,0); }
 }
 
-@keyframes animContainer {
+@keyframes animContainerOut {
 	to { -webkit-transform: translate3d(-100%,0,0); transform: translate3d(-100%,0,0); }
+}
+
+.container.view {
+    position: absolute;
+    left: -100%;
+	-webkit-animation: animContainerIn 0.5s cubic-bezier(0.25,0.1,0.25,1) both;
+	animation: animContainerIn 0.5s cubic-bezier(0.25,0.1,0.25,1) both;
+}
+
+@-webkit-keyframes animContainerIn {
+	to { -webkit-transform: translate3d(100%,0,0); }
+}
+
+@keyframes animContainerIn {
+	to { -webkit-transform: translate3d(100%,0,0); transform: translate3d(100%,0,0); }
 }
 
 /* Change layout class for header */

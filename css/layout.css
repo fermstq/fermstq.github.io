@@ -24,24 +24,6 @@
 }
 
 
-/* Content animations 
-.loaded.hide .intro h2,
-.loaded.hide .intro .intro-container,
-.loaded.hide .intro .intro-container .project-teaser {
-	-webkit-animation: animExitIntro 1s cubic-bezier(0.7,0,0.3,1) both;
-	animation: animExitIntro 1s cubic-bezier(0.7,0,0.3,1) both;
-    -webkit-animation-delay: 0s;
-	animation-delay: 0s;
-}
-
-@-webkit-keyframes animExitIntro {
-	to { opacity: 0; -webkit-transform: scale3d(0.01,0.01,1); }
-}
-
-@keyframes animExitIntro {
-	to { opacity: 0; -webkit-transform: scale3d(0.01,0.01,1); transform: scale3d(0.01,0.01,1); }
-}*/
-
 /* -- Navigation Bar -- */
 
 nav {
@@ -69,7 +51,8 @@ button#menu-button{
     align-items: center;
     justify-content: space-between;
     width: 100vw;
-    height: 4rem;
+    height: 10vh;
+    min-height: 4rem;
     z-index:2;
     background-color: pink;
 }
@@ -77,13 +60,12 @@ button#menu-button{
 .menu-wrapper{
     display:flex;
     position:relative;
-    margin: 0 2rem;
+    margin: 0 3rem;
     align-items: center;
     justify-content: space-between;
-    height: 65%;
-    max-height:4rem;
+    height: 75%;
+    max-height: 4rem;
     width: 100%;
-    background-color:orange;
     /*z-index: 3;*/
 }
 
@@ -250,7 +232,7 @@ button#menu-button{
 }
 
 .content-wrapper{
-    padding: 0 2rem;
+    padding: 0 3rem;
 }
 
 .cover{
@@ -299,7 +281,7 @@ button#menu-button{
     display: -ms-flexbox;
     display: flex;
     flex-direction: column;
-    padding: 5rem 2rem;
+    padding: 5rem 3rem;
     position: relative;
 }
 
@@ -316,7 +298,7 @@ button#menu-button{
 
 @media screen and (min-width:44em) {
  
-    body{
+    body.no-scroll{
         overflow: hidden;
     }
     
@@ -341,7 +323,7 @@ button#menu-button{
     
     .title-block{
         display: block;
-        width: 50vw;
+        width: 48vw;
         height: 100vh;
         position: fixed;
         background-color: white;
@@ -349,18 +331,24 @@ button#menu-button{
     }
     
     .menu-block{
-        width: 50vw;
+        width: 48vw;
+        height: 10vh;
+        background-color: #fff;
+    }
+    
+    .menu-wrapper{
+        height: 65%;
     }
     
     #main-menu{
         height: calc(100vh - 8rem);
         top: 4rem;
-        width: 50%;
+        width: 48vw;
         right: 100%
     }
     
     #main-menu.active{
-        right: 50%;
+        right: 52vw;
     }
     
     #flexbox{
@@ -389,7 +377,7 @@ button#menu-button{
     }
     
     .cover{
-        width: 50vw;
+        width: 48vw;
         height: 100vh;
         top: 0;
         -webkit-transition: right 400ms cubic-bezier(0.645, 0.045, 0.355, 1);
@@ -431,11 +419,10 @@ button#menu-button{
         display: flex;
         align-content: stretch;
         position: absolute;
-        top: 5rem;
-        left: calc(50vw - 0.75rem);
-        width: 0.75rem;
-        height:calc(100vh - 5rem);
-        top: 5vh;
+        top:0;
+        height: 100vh;
+        left: 48vw;
+        width: 0.8rem;
         z-index: 10;
         background-color: yellow;
         
@@ -444,7 +431,7 @@ button#menu-button{
     .project-content{
         top: 0;
         left:100%;
-        width: 50vw;
+        width: 48vw;
         height: auto;
         min-height: fit-content;
         overflow-y: scroll;
@@ -469,7 +456,7 @@ button#menu-button{
     
     #footer{
         position: absolute;
-        width: 50vw;
+        width: 48vw;
         left: 0;
         bottom: 0;
     }
@@ -483,17 +470,17 @@ button#menu-button{
     @media screen and (min-height:40em) {
         
         .menu-block{
-            height: 6rem;
+            height: 8rem;
         }
 
-        #project-track{
+        /*#project-track{
             top: 6rem;
             height: calc(100vh - 12rem);
-        }
+        }*/
         
         #main-menu{
-            height: calc(100vh - 12rem);
-            top: 6rem;
+            height: calc(100vh - 16rem);
+            top: 8rem;
         }
         
         
@@ -503,7 +490,7 @@ button#menu-button{
 
 /* ---------------- Desktop ------------------ */
 
-@media screen and (min-width:64em) {
+@media screen and (min-width:75em) {
     
 
     .menu-block{
@@ -544,7 +531,7 @@ button#menu-button{
     }
     
     #project-track{
-        left: calc(35vw - 0.75rem);
+        left: 35vw;
     }
     
     

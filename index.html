@@ -8,7 +8,13 @@
 		<meta name="description" content="" />
 		<meta name="keywords" content="" />
 		<meta name="author" content="Quin Fermstad" />
-		<link rel="shortcut icon" href="../favicon.ico">
+		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+        <link rel="manifest" href="/site.webmanifest">
+        <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#89da90">
+        <meta name="msapplication-TileColor" content="#89da90">
+        <meta name="theme-color" content="#f1f1f1">
 		<link rel="stylesheet" type="text/css" href="css/normalize.css" />
 		<link rel="stylesheet" type="text/css" href="css/effect2.css" />
         <link rel="stylesheet" type="text/css" href="css/layout.css">
@@ -25,7 +31,7 @@
             <header class="header">
                 <h1 class="logo">
                     <svg class="inner" aria-labelledby="logo_title">
-                    <title id="logo_title">Quin Fermstad Design Portfolio</title>
+                    <title id="logo_title">Quin Fermstad - Design Portfolio</title>
                         <g>
                             <path class="logo-stroke ease" d="M306.5,0.1H55.1h-6.9H1.9C0.8,0.1,0,0.9,0,2v154.6c0,1,0.8,1.9,1.9,1.9h46.3h6.9h251.4c1,0,1.9-0.8,1.9-1.9
                                 V2C308.3,0.9,307.5,0.1,306.5,0.1z M45.9,147.9H11.1c-0.3,0-0.5-0.2-0.5-0.5V11.1c0-0.3,0.2-0.5,0.5-0.5h34.9
@@ -103,7 +109,7 @@
                             c0.3,0,0.5,0.2,0.5,0.5v136.3C46.3,147.7,46.1,147.9,45.9,147.9z"/>
                         <polygon class="logo-pop ease" points="237.1,64 212.5,64 212.5,88.5 "/>
                         <circle class="logo-pop ease" cx="123.5" cy="78.4" r="14.4"/>
-                        </svg>
+                    </svg>
                 </h1>
                 <div class="loader">
                     <svg class="inner" width="60px" height="60px" viewBox="0 0 80 80">
@@ -130,7 +136,7 @@
 						<p>No way! Hey Hey, me ok! Do Re Mi What Fa Si Ti Doi Nemo</p>
 					</div>
 				</div>
-                <button class="intro-wipe" style="width: 20%; margin: 0 auto;">
+                <button id="intro-wipe" style="display:block; width: 20%; margin: 0 auto;">
 
                 </button>
             </div>
@@ -139,48 +145,49 @@
         <div id="main">
             <nav class="menu-block">
                 <div class="menu-wrapper">
-                    <img src="http://via.placeholder.com/600x200" class="image" id="logo">
+                    <img src="assets/logo.svg" class="image" id="logo" />
                     <button id="menu-button">
 
                     </button>
                 </div>
             </nav>
+            <div id="main-menu">
+                <div class="project-menu-select" id="p1">
+                    <div class="content-wrapper">
+                        Project One
+                    </div>
+                </div>
+                <div class="project-menu-select" id="p2">
+                    <div class="content-wrapper">
+                        Project Two
+                    </div>
+                </div>
+                <div class="project-menu-select" id="p3">
+                    <div class="content-wrapper">
+                        Project Three
+                    </div>
+                </div>
+                <div class="project-menu-select" id="p4">
+                    <div class="content-wrapper">
+                        Project Four
+                    </div>
+                </div>
+                <div class="project-menu-select" id="p5">
+                    <div class="content-wrapper">
+                        Project Five
+                    </div>
+                </div>
+                <div class="project-menu-select" id="p6">
+                    <div class="content-wrapper">
+                        Project Six
+                    </div>
+                </div>
+            </div>
+            
+            <div id="project-track"></div>
+            
+            
             <div id="body-wrapper">
-                <div id="main-menu">
-                    <div class="project-menu-select" id="p1">
-                        <div class="content-wrapper">
-                            Project One
-                        </div>
-                    </div>
-                    <div class="project-menu-select" id="p2">
-                        <div class="content-wrapper">
-                            Project Two
-                        </div>
-                    </div>
-                    <div class="project-menu-select" id="p3">
-                        <div class="content-wrapper">
-                            Project Three
-                        </div>
-                    </div>
-                    <div class="project-menu-select" id="p4">
-                        <div class="content-wrapper">
-                            Project Four
-                        </div>
-                    </div>
-                    <div class="project-menu-select" id="p5">
-                        <div class="content-wrapper">
-                            Project Five
-                        </div>
-                    </div>
-                    <div class="project-menu-select" id="p6">
-                        <div class="content-wrapper">
-                            Project Six
-                        </div>
-                    </div>
-                </div>
-
-                <div id="project-track">
-                </div>
 
                 <!-- PROJECT ONE -->
 
@@ -280,9 +287,9 @@
             </div>
             <footer class="menu-block" id="footer">
                 <div class="menu-wrapper">
-                    <div class="menu-block-left" id="contact">
-                        Contact
-                    </div>
+                    <button class="menu-block-left" id="about">
+                        About
+                    </button>
                     <div class="menu-block-right" id="resume">
                         Resume
                     </div>

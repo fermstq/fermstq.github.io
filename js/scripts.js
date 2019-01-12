@@ -93,10 +93,21 @@ $(document).ready(function() {
             $('#footer').toggleClass ('active');
     }); 
     
-    $('.intro-wipe').click (function(e) {
+    $('#intro-wipe').click (function(e) {
             e.preventDefault();
+            $('#container').removeClass ('view');
             $('#container').addClass ('hide');
             $('#main').addClass ('view');
+            $('.loading-complete').addClass ('no-scroll');
+    }); 
+    
+    $('#about').click (function(e) {
+            e.preventDefault();
+            $('#container').removeClass ('hide');
+            $('#container').addClass ('view');
+            $('#main').removeClass ('view');
+            $('#main').addClass ('hide');
+            $('.loading-complete').removeClass ('no-scroll');
     }); 
     
 }); 
