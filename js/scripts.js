@@ -89,8 +89,8 @@ $(document).ready(function() {
     
     $('#menu-button').click (function(e) {
             e.preventDefault();
-            $('#main-menu').toggleClass ('active');
-            $('#footer').toggleClass ('active');
+            $('#main-menu').toggleClass ('hide view');
+            $('#footer').toggleClass ('hide view');
     }); 
     
     $('#intro-wipe').click (function(e) {
