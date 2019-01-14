@@ -348,7 +348,7 @@ Content animations
 	animation-delay: 0.125s;
 }
 
-/* Stagger out delays */
+/* Stagger delays for menu items */
 
 #main-menu.hide .project-menu-select:nth-of-type(2){
     -webkit-animation-delay: 0.025s;
@@ -392,6 +392,52 @@ Content animations
 
 }
 
+@media screen and (min-width:55em) {
+
+    .cover.view{
+        -webkit-animation: animRightIn 0.4s cubic-bezier(0.25,0.1,0.25,1) both;
+        animation: animRightIn 0.4s cubic-bezier(0.25,0.1,0.25,1) both;
+    }
+
+    .cover.hide{
+        -webkit-animation: animRightOut 0.4s cubic-bezier(0.25,0.1,0.25,1) both;
+        animation: animRightOut 0.4s cubic-bezier(0.25,0.1,0.25,1) both;
+    }
+
+    .project-content.hide{
+        -webkit-animation: animRightIn 0.4s cubic-bezier(0.25,0.1,0.25,1) both;
+        animation: animRightIn 0.4s cubic-bezier(0.25,0.1,0.25,1) both;
+    }
+
+    .project-content.view{
+        -webkit-animation: animRightOut 0.4s cubic-bezier(0.25,0.1,0.25,1) both;
+        animation: animRightOut 0.4s cubic-bezier(0.25,0.1,0.25,1) both;
+    }
+    
+    .project-button{
+        -webkit-animation: animButton 0.4s cubic-bezier(0.25,0.1,0.25,1) both;
+        animation: animButton 0.4s cubic-bezier(0.25,0.1,0.25,1) both;
+    }
+    
+    .project.active .project-button{
+        -webkit-animation: animButtonActive 0.4s cubic-bezier(0.25,0.1,0.25,1) both;
+        animation: animButtonActive 0.4s cubic-bezier(0.25,0.1,0.25,1) both;
+    }
+    
+    @-webkit-keyframes animButton {
+        to { -webkit-transform: translate3d(12rem,0,0); }
+    }
+    @-webkit-keyframes animButton {
+        to { -webkit-transform: translate3d(12rem,0,0); }
+    }
+    @-webkit-keyframes animButtonActive {
+        from { -webkit-transform: translate3d(12rem,0,0); }
+    }
+    @-webkit-keyframes animButtonActive {
+        from { -webkit-transform: translate3d(12rem,0,0); }
+    }
+}
+
 /* DEFAULT KEYFRAMES */
 
 /* Left Slide Animation */
@@ -412,7 +458,15 @@ Content animations
     to { -webkit-transform: translate3d(100%,0,0); transform: translate3d(100%,0,0); }
 }
 
-/* Right Slide Animation 
+/* Right Slide Animation */ 
+
+@-webkit-keyframes animRightIn {
+    from { -webkit-transform: translate3d(-100%,0,0); }
+}
+
+@keyframes animRightIn {
+    from { -webkit-transform: translate3d(-100%,0,0); transform: translate3d(-100%,0,0); }
+}
 
 @-webkit-keyframes animRightOut {
     to { -webkit-transform: translate3d(-100%,0,0); }
@@ -421,14 +475,6 @@ Content animations
 @keyframes animRightOut {
     to { -webkit-transform: translate3d(-100%,0,0); transform: translate3d(-100%,0,0); }
 }
-
-@-webkit-keyframes animRightOut {
-    to { -webkit-transform: translate3d(100%,0,0); }
-}
-
-@keyframes animRightOut {
-    to { -webkit-transform: translate3d(100%,0,0); transform: translate3d(100%,0,0); }
-}*/
 
 /* Change layout class for header */
 .loading-complete .header {
