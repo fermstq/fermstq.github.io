@@ -9,21 +9,6 @@
     position: absolute;
 }
 
-#main{
-    display:none;
-    opacity: 0;
-    -webkit-transition: opacity 500ms;
-    -moz-transition: opacity 500ms;
-    -o-transition: opacity 500ms;
-    transition: opacity 500ms;
-}
-
-#main.view{
-    display: block;
-    opacity: 1;
-}
-
-
 /* -- Navigation Bar -- */
 
 nav {
@@ -94,6 +79,10 @@ footer.menu-block{
 
 /* -- Logo -- */
 
+#logo{
+    cursor: pointer;
+}
+
 #logo .logo-stroke{
     fill: #221F1F;
 }
@@ -111,7 +100,6 @@ footer.menu-block{
     height: 82vh;
     width: 100vw;
     overflow: none;
-    right: 100%;
 }
 
 #main-menu .project-menu-select{
@@ -139,12 +127,8 @@ footer.menu-block{
 /* -- Projects --*/
 
 .project{
-    height: 100vh;
-    position: relative;
-}
-
-#project-two{
-    top: 200vh
+    position: absolute;
+    display: flex;
 }
 
 /* -- Project Title Area -- */
@@ -155,18 +139,22 @@ footer.menu-block{
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-content: stretch; 
     top: 10vh;
     left: 0;
     overflow-x: hidden;
     width: 100vw;
-    height: 80vh;
+    height: 82vh;
     z-index: -2;
+    margin: 0;
+    padding: 0;
+    list-style: none;
 }
 
 .title-flex-wrapper{
     display: flex;
+    position: absolute;
     overflow: hidden;
     flex-direction: row;
     width: 100vw;
@@ -191,9 +179,8 @@ footer.menu-block{
 #footer{
     position: absolute;
     width: 100vw;
-    right: 100%;
     bottom: 0;
-    z-index: 1000;
+    z-index: 50;
     /*-webkit-transition: right 400ms cubic-bezier(0.645, 0.045, 0.355, 1);
     -moz-transition: right 400ms cubic-bezier(0.645, 0.045, 0.355, 1);
     -ms-transition: right 400ms cubic-bezier(0.645, 0.045, 0.355, 1);
@@ -218,12 +205,10 @@ footer.menu-block{
 }
 
 .project-title{
-    position: absolute;
     display:flex;
     flex-direction: column;
     left: 0;
     width: auto;
-    max-width: 80%;
     height: auto;
 }
 
@@ -243,6 +228,16 @@ footer.menu-block{
 
 .content-wrapper{
     padding: 0 3rem;
+}
+
+.cover-flex-wrapper{
+    position: relative;
+    top: 0;
+    height: 100rem;
+    min-height: 100rem;
+    width: 100vw;
+    display: block;
+    background-color: blue;
 }
 
 .cover{
@@ -276,7 +271,7 @@ footer.menu-block{
     transition: background-color 400ms ease, border-color 400ms ease;
 }
 
-.project.active .project-button{
+.project-button.active{
     background-color: rgba(255, 255, 255, 0);
     border-color: #221F1F;
     
@@ -308,31 +303,31 @@ footer.menu-block{
 }
 
 #project-one{
-    z-index: 70;
+    z-index: 7;
 }
 
 #project-two{
-    z-index: 60;
+    z-index: 6;
 }
 
 #project-three{
-    z-index: 50;
+    z-index: 5;
 }
 
 #project-four{
-    z-index: 40;
+    z-index: 4;
 }
 
 #project-five{
-    z-index: 30;
+    z-index: 3;
 }
 
 #project-six{
-    z-index: 20;
+    z-index: 2;
 }
 
 #project-seven{
-    z-index: 10;
+    z-index: 1;
 }
 
 #project-eight{
@@ -373,7 +368,7 @@ footer.menu-block{
 /* ----------- MEDIA QUERIES  ----------- */
 
 
-/* ----------------- Vertical Media Queries  ----------------- */
+/* ----------------- Vertical Media Queries above Mobile  ----------------- */
 
 @media screen and (max-width:55em) {
         
@@ -413,7 +408,6 @@ footer.menu-block{
     
     #body-wrapper{
         overflow: hidden;
-        flex-direction: row;
         top: 0;
         height: 100vh;
         -webkit-backface-visibility: hidden;
@@ -459,7 +453,6 @@ footer.menu-block{
         height: 75vh;
         top: 15vh;
         width: 48vw;
-        /*right: 100%*/
     }
     
     #flexbox{
@@ -480,6 +473,12 @@ footer.menu-block{
     
     .project{
         margin-top:0;
+        position: initial;
+    }
+    
+    .project-title{
+        position: absolute;
+        max-width: 80%;
     }
     
     .project-content .content-wrapper{
@@ -500,7 +499,7 @@ footer.menu-block{
         left: calc(48vw - 6.25rem);
         background-color: red;
         border-radius: 50%;
-        z-index: 1000;
+        z-index: 50;
     }
     
     #project-track{
@@ -514,14 +513,14 @@ footer.menu-block{
         height: 100vh;
         left: 48vw;
         width: 0.8rem;
-        z-index: 10;
+        z-index: 50;
         background-color: yellow;
         
     }
     
     .project-content{
         top: 0;
-        left:100%;
+        right: 0;
         width: 52vw;
         height: auto;
         min-height: fit-content;
@@ -556,6 +555,10 @@ footer.menu-block{
         #main-menu{
             height: calc(100vh - 10rem);
             top: 6rem;
+        }
+        
+        #body-wrapper{
+            height: calc(100vh - 7rem);
         }
         
         
