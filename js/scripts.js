@@ -79,8 +79,6 @@
 
 $(document).ready(function() {
     
-    var childProjectContents = 
-    
     $('.project-button').click (function(e) {
         e.preventDefault();
         $(this).toggleClass ('active');
@@ -118,11 +116,19 @@ $(document).ready(function() {
         $('#about-content').toggleClass ('view');
     }); 
     
+        
+    // Menu Project Links
+    $('#p1').click (function(e) {
+        e.preventDefault();
+        
+        $('.project').classList.remove('project-active', 'project-slide-in-right', 'project-slide-in-left', 'project-slide-out-right', 'project-slide-out-left');
+        
+    
+        $('#main-menu').toggleClass ('hide view');
+        $('#footer').toggleClass ('hide view');
+    });
+    
 }); 
-
-function closeMain(){
-    $('#main').addClass ('hide');
-}
 
 
 // Project Mobile Slider
@@ -180,14 +186,14 @@ function closeMain(){
 
             $projectList.lastElementChild.classList.remove('project-hidden', 'project-slide-in-right', 'project-slide-in-left', 'project-slide-out-right', 'project-slide-out-left');
             $projectList.lastElementChild.classList.add('project-active', 'project-slide-in-left');
-
-        }
+        };
+        
     };
 
     // Create method for going on the next project
     const projectRight = (e) => {
         e.preventDefault();
-
+        
         // Get current project
         let $currentProject = document.querySelector('.project-active');
 
@@ -208,7 +214,8 @@ function closeMain(){
 
             $projectList.firstElementChild.classList.remove('project-hidden', 'project-slide-in-right', 'project-slide-in-left', 'project-slide-out-right', 'project-slide-out-left');
             $projectList.firstElementChild.classList.add('project-active', 'project-slide-in-right');
-        }
+        };
+
     };
 
     // Create new custom event for sliding to the left
@@ -241,4 +248,5 @@ function closeMain(){
             $projectRight.dispatchEvent(projectRightEvent);
         }
     }, false);
+    
 })();

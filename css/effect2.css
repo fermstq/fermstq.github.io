@@ -377,23 +377,11 @@ Content animations
 }
 
 #main-menu.view .project-menu-select{
-    /*border-radius: 0;
-    -webkit-transition: border-radius 200ms ease;
-    -moz-transition: border-radius 200ms ease;
-    -ms-transition: border-radius 200ms ease;
-    -o-transition: border-radius 200ms ease;
-    transition: border-radius 200ms ease;*/
 	-webkit-animation: animLeftIn 0.4s cubic-bezier(0.25,0.1,0.25,1) both;
 	animation: animLeftIn 0.4s cubic-bezier(0.25,0.1,0.25,1) both;
 }
 
 #main-menu.hide .project-menu-select{
-    /*border-radius: 2rem;
-    -webkit-transition: border-radius 200ms ease;
-    -moz-transition: border-radius 200ms ease;
-    -ms-transition: border-radius 200ms ease;
-    -o-transition: border-radius 200ms ease;
-    transition: border-radius 200ms ease;*/
 	-webkit-animation: animLeftOut 0.4s cubic-bezier(0.25,0.1,0.25,1) both;
 	animation: animLeftOut 0.4s cubic-bezier(0.25,0.1,0.25,1) both;
 }
