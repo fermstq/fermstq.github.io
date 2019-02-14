@@ -53,6 +53,7 @@
 							}
 
 							classie.add( document.body, 'loading-complete' );
+                            classie.remove( document.body, 'no-scroll' );
 							window.removeEventListener( 'scroll', noscroll );
 						};
 

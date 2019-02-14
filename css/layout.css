@@ -5,6 +5,10 @@
 
 /* -- Intro -- */
 
+body.no-scroll{
+    overflow: hidden;
+}
+
 #container.hide{
     position: absolute;
 }
@@ -100,6 +104,7 @@ footer.menu-block{
     height: 82vh;
     width: 100vw;
     overflow: none;
+    z-index: 500;
 }
 
 #main-menu .project-menu-select{
@@ -144,14 +149,6 @@ footer.menu-block{
 
 .project{
     position: absolute;
-    display: flex;
-    height: 100%;
-}
-
-/* -- Project Title Area -- */
-
-#body-wrapper{
-    position: absolute;
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -167,7 +164,10 @@ footer.menu-block{
     margin: 0;
     padding: 0;
     list-style: none;
+    scroll-behavior: smooth;
 }
+
+/* -- Project Title Area -- */
 
 .title-flex-wrapper{
     display: flex;
@@ -246,15 +246,6 @@ footer.menu-block{
 
 .content-wrapper{
     padding: 0 3rem;
-}
-
-.cover-flex-wrapper{
-    position: relative;
-    top: 0;
-    height: 50vh;
-    width: 100vw;
-    display: block;
-    background-color: blue;
 }
 
 .cover{
@@ -428,22 +419,9 @@ footer.menu-block{
 /* ----------------- Tablet  ----------------- */
 
 @media screen and (min-width:55em) {
- 
-    body.no-scroll{
-        overflow: hidden;
-    }
     
     nav{
         position: fixed;
-    }
-    
-    #body-wrapper{
-        overflow: hidden;
-        top: 0;
-        height: 100vh;
-        -webkit-backface-visibility: hidden;
-        backface-visibility: hidden;
-        will-change: overflow;
     }
     
     .title-flex-wrapper{
@@ -506,6 +484,12 @@ footer.menu-block{
     .project{
         margin-top:0;
         position: initial;
+        overflow: hidden;
+        top: 0;
+        height: 100vh;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        will-change: overflow;
     }
     
     .project-title{
@@ -624,6 +608,10 @@ footer.menu-block{
     }
     
     .title-block{
+        width: 35vw;
+    }
+    
+    .title-flex-wrapper{
         width: 35vw;
     }
     

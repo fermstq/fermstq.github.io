@@ -300,21 +300,16 @@ Content animations
 	animation: animContentFill 0.5s cubic-bezier(0.25,0.1,0.25,1) both;
 }*/
 
-#main{
-    display: block;
+body.hide{
     -webkit-animation: animFadeOut 0.5s cubic-bezier(0.25,0.1,0.25,1) both;
 	animation: animFadeOut 0.5s cubic-bezier(0.25,0.1,0.25,1) both;
 }
 
-#main.view{
+body{
     -webkit-animation-delay: 0.25s !important;
 	animation-delay: 0.25s !important;
     -webkit-animation: animFadeIn 1s cubic-bezier(0.25,0.1,0.25,1) both;
 	animation: animFadeIn 1s cubic-bezier(0.25,0.1,0.25,1) both;
-}
-
-#main.hide{
-    display:none;
 }
     
 /* Project mobile animations */
@@ -370,7 +365,7 @@ Content animations
 }
 
 #main-menu.hide{
-    -webkit-animation-delay: 0.5s !important;
+    -webkit-animation-delay: 0.3s !important;
 	animation-delay: 0.5s !important;
     -webkit-animation: animLeftOut 0.1s cubic-bezier(0.25,0.1,0.25,1) both;
 	animation: animLeftOut 0.1s cubic-bezier(0.25,0.1,0.25,1) both;
@@ -389,47 +384,47 @@ Content animations
 /* Stagger in delays for menu items */
 
 #main-menu.view .project-menu-select:nth-of-type(2){
-    -webkit-animation-delay: 0.025s;
-	animation-delay: 0.025s;
+    -webkit-animation-delay: 0.02s;
+	animation-delay: 0.02s;
 }
 #main-menu.view .project-menu-select:nth-of-type(3){
-    -webkit-animation-delay: 0.05s;
-	animation-delay: 0.05s;
+    -webkit-animation-delay: 0.04s;
+	animation-delay: 0.04s;
 }
 #main-menu.view .project-menu-select:nth-of-type(4){
-    -webkit-animation-delay: 0.075s;
-	animation-delay: 0.075s;
+    -webkit-animation-delay: 0.06s;
+	animation-delay: 0.06s;
 }
 #main-menu.view .project-menu-select:nth-of-type(5){
-    -webkit-animation-delay: 0.1s;
-	animation-delay: 0.1s;
+    -webkit-animation-delay: 0.08s;
+	animation-delay: 0.08s;
 }
 #main-menu.view .project-menu-select:nth-of-type(6){
-    -webkit-animation-delay: 0.125s;
-	animation-delay: 0.125s;
+    -webkit-animation-delay: 0.1s;
+	animation-delay: 0.1s;
 }
 
 /* Stagger out delays for menu items */
 
 #main-menu.hide .project-menu-select:nth-of-type(2){
-    -webkit-animation-delay: 0.025s;
-	animation-delay: 0.025s;
+    -webkit-animation-delay: 0.02s;
+	animation-delay: 0.02s;
 }
 #main-menu.hide .project-menu-select:nth-of-type(3){
-    -webkit-animation-delay: 0.05s;
-	animation-delay: 0.05s;
+    -webkit-animation-delay: 0.04s;
+	animation-delay: 0.04s;
 }
 #main-menu.hide .project-menu-select:nth-of-type(4){
-    -webkit-animation-delay: 0.075s;
-	animation-delay: 0.075s;
+    -webkit-animation-delay: 0.06s;
+	animation-delay: 0.06s;
 }
 #main-menu.hide .project-menu-select:nth-of-type(5){
-    -webkit-animation-delay: 0.1s;
-	animation-delay: 0.1s;
+    -webkit-animation-delay: 0.08s;
+	animation-delay: 0.08s;
 }
 #main-menu.hide .project-menu-select:nth-of-type(6){
-    -webkit-animation-delay: 0.125s;
-	animation-delay: 0.125s;
+    -webkit-animation-delay: 0.1s;
+	animation-delay: 0.1s;
 }
 
 
@@ -440,15 +435,15 @@ Content animations
     #footer.view {
         -webkit-animation: animLeftIn 0.4s cubic-bezier(0.25,0.1,0.25,1) both;
         animation: animLeftIn 0.4s cubic-bezier(0.25,0.1,0.25,1) both;
-        -webkit-animation-delay: 0.15s;
-        animation-delay: 0.15s;
+        -webkit-animation-delay: 0.12s;
+        animation-delay: 0.12s;
     }
 
     #footer.hide{
         -webkit-animation: animLeftOut 0.4s cubic-bezier(0.25,0.1,0.25,1) both;
         animation: animLeftOut 0.4s cubic-bezier(0.25,0.1,0.25,1) both;
-        -webkit-animation-delay: 0.15s;
-        animation-delay: 0.15s;
+        -webkit-animation-delay: 0.12s;
+        animation-delay: 0.12s;
     }
 
 }
