@@ -5,10 +5,6 @@
 
 /* -- Intro -- */
 
-body.no-scroll{
-    overflow: hidden;
-}
-
 #container.hide{
     position: absolute;
 }
@@ -19,6 +15,10 @@ nav {
     position: fixed;
     top: 0;
     left: 0;
+}
+
+body.no-scroll.mobile{
+    overflow: hidden;
 }
 
 button#menu-button{
@@ -84,14 +84,17 @@ footer.menu-block{
 /* -- Logo -- */
 
 #logo{
+    display: block;
+    width: auto;
+    height: 100%;
     cursor: pointer;
 }
 
-#logo .logo-stroke{
+svg .logo-stroke{
     fill: #221F1F;
 }
 
-#logo .logo-pop{
+svg .logo-pop{
     fill: #89da90;
 }
 
@@ -99,7 +102,7 @@ footer.menu-block{
 /* -- Menu Slide In -- */
 
 #main-menu{
-    position: absolute;
+    position: fixed;
     top: 10vh;
     height: 82vh;
     width: 100vw;
@@ -148,23 +151,17 @@ footer.menu-block{
 /* -- Projects --*/
 
 .project{
-    position: absolute;
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
     flex-direction: row;
     align-content: stretch; 
-    top: 10vh;
-    left: 0;
-    overflow-x: hidden;
     width: 100vw;
-    height: 82vh;
     z-index: -2;
     margin: 0;
     padding: 0;
     list-style: none;
-    scroll-behavior: smooth;
 }
 
 /* -- Project Title Area -- */
@@ -177,6 +174,7 @@ footer.menu-block{
     width: 100vw;
     flex-wrap: nowrap;
     height: 50%;
+    top: 10vh;
 }
 
 .title-block{
@@ -194,7 +192,7 @@ footer.menu-block{
 }
 
 #footer{
-    position: absolute;
+    position: fixed;
     width: 100vw;
     bottom: 0;
     z-index: 50;
@@ -257,7 +255,7 @@ footer.menu-block{
     height: 50%;
     background-color: blue;
     right: 0;
-    top: 0;
+    top: 10vh;
     position: absolute;
 }
 
@@ -287,16 +285,13 @@ footer.menu-block{
 
 .project-content{
     position: absolute;
-    top:50%;
+    top: calc(50% + 10vh);
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    overflow: scroll;
     width: 100vw;
     height: auto;
-    
-    scroll-behavior: smooth;
 }
 
 .project-content .content-wrapper{
@@ -413,6 +408,18 @@ footer.menu-block{
             height: calc(100vh - 7rem);
             top: 4rem;
         }
+        
+        .title-flex-wrapper{
+            top: 4rem;
+        }
+        
+        .cover{
+            top: 4rem;
+        }
+        
+        .project-content{
+            top: calc(50% + 4rem);
+        }
     }
 }
 
@@ -420,10 +427,10 @@ footer.menu-block{
 
 @media screen and (min-width:55em) {
     
-    nav{
-        position: fixed;
+    body.no-scroll{
+        overflow: hidden;
     }
-    
+
     .title-flex-wrapper{
         flex-direction: column;
         height: 100vh;
@@ -483,7 +490,7 @@ footer.menu-block{
     
     .project{
         margin-top:0;
-        position: initial;
+        position: absolute;
         overflow: hidden;
         top: 0;
         height: 100vh;

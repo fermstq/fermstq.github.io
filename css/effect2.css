@@ -36,7 +36,7 @@
 	transform: translate3d(0,25%,0);
 }
 
-.loaded .logo{
+.loaded .logo, html.no-js .logo{
     left: 0;
 }
 
@@ -167,13 +167,13 @@
 
 
 /* Header elements when loading finishes */
-.loaded .logo,
+.loaded .logo, .no-js .logo,
 .loaded .loader {
 	opacity: 1;
 }
 
 
-.loaded .logo {
+.loaded .logo, html.no-js .logo {
 	-webkit-transform-origin: 50% 0;
 	transform-origin: 50% 0;
 	-webkit-animation: animLoadedLogo 1s cubic-bezier(0.7,0,0.3,1) forwards;
@@ -188,7 +188,7 @@
 	to { -webkit-transform: translate3d(0,100%,0) translate3d(0,50px,0) scale3d(0.4,0.4,1); transform: translate3d(0,100%,0) translate3d(0,50px,0) scale3d(0.4,0.4,1); }
 }
 
-.loaded .loader {
+.loaded .loader, html.no-js .loader {
 	-webkit-animation: animLoadedLoader 0.5s cubic-bezier(0.7,0,0.3,1) forwards;
 	animation: animLoadedLoader 0.5s cubic-bezier(0.7,0,0.3,1) forwards;
 }
@@ -223,17 +223,19 @@
 }
 
 
-.loaded .logo svg .logo-heading{
-	fill: rgba(255, 255, 255, 0);
+.loaded .logo svg .logo-heading, .no-js .logo svg .logo-heading{
+	-webkit-animation: animFadeOut 0.5s cubic-bezier(0.25,0.1,0.25,1) both;
+	animation: animFadeOut 0.5s cubic-bezier(0.25,0.1,0.25,1) both;
 }
 
-.loaded .logo svg .logo-subhead{
-	fill: rgba(255, 255, 255, 0);
+.loaded .logo svg .logo-subhead, .no-js .logo svg .logo-subhead{
+	-webkit-animation: animFadeOut 0.5s cubic-bezier(0.25,0.1,0.25,1) both;
+	animation: animFadeOut 0.5s cubic-bezier(0.25,0.1,0.25,1) both;
 }
 
 
 /* Header animation when loading finishes */
-.loaded .header {
+.loaded .header, html.no-js .header {
 	-webkit-animation: animLoadedHeader 1s cubic-bezier(0.7,0,0.3,1) forwards;
 	animation: animLoadedHeader 1s cubic-bezier(0.7,0,0.3,1) forwards;
 }
@@ -250,13 +252,19 @@ Content animations
 .loaded .intro h2,
 .loaded .intro .intro-container,
 .loaded .intro .intro-container .project-teaser,
-.loaded .codrops-demos {
+.loaded .codrops-demos,
+html.no-js .intro h2,
+html.no-js .intro .intro-container,
+html.no-js .intro .intro-container .project-teaser,
+html.no-js .codrops-demos{
 	-webkit-animation: animLoadedContent 1s cubic-bezier(0.7,0,0.3,1) both;
 	animation: animLoadedContent 1s cubic-bezier(0.7,0,0.3,1) both;
 }
 
 .loaded .intro h2,
-.loaded .intro .intro-container .project-teaser {
+.loaded .intro .intro-container .project-teaser,
+html.no-js .intro h2,
+html.no-js .intro .intro-container .project-teaser {
 	-webkit-animation-delay: 0.15s;
 	animation-delay: 0.15s;
 }
@@ -581,24 +589,6 @@ body{
 /* Change layout class for header */
 .loading-complete .header {
 	position: absolute;
-}
-
-/* No JS */
-.no-js .header {
-	position: relative;
-	min-height: 0px;
-}
-
-.no-js .header .logo {
-	margin-top: 20px;
-	height: 180px;
-	opacity: 1;
-	-webkit-transform: none;
-	transform: none;
-}
-
-.no-js .header .logo svg path {
-	fill: #fff;
 }
 
 /* Media queries */

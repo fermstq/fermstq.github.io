@@ -12,6 +12,7 @@ $(document).ready(function() {
         e.preventDefault();
         $('#main-menu').toggleClass ('hide view');
         $('#footer').toggleClass ('hide view');
+        $('.no-scroll').toggleClass ('mobile');
     }); 
     
     $('.intro-out').click (function(e) {

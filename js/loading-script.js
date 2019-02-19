@@ -10,25 +10,32 @@
 
 	function init() {
 		var onEndInitialAnimation = function() {
-			if( support.animations ) {
+            if( support.animations ) {
 				this.removeEventListener( animEndEventName, onEndInitialAnimation );
 			}
 
 			startLoading();
 		};
+        
+        if( window.location.href.indexOf("#") > -1 ) {
+            onEndInitialAnimation();
+        }
+        
+        else {
 
-		// disable scrolling
-		window.addEventListener( 'scroll', noscroll );
+            // disable scrolling
+            window.addEventListener( 'scroll', noscroll );
 
-		// initial animation
-		classie.add( container, 'loading' );
+            // initial animation
+            classie.add( container, 'loading' );
 
-		if( support.animations ) {
-			container.addEventListener( animEndEventName, onEndInitialAnimation );
-		}
-		else {
-			onEndInitialAnimation();
-		}
+            if( support.animations ) {
+                container.addEventListener( animEndEventName, onEndInitialAnimation );
+            }
+            else {
+                onEndInitialAnimation();
+            }
+        }
 	}
 
 	function startLoading() {
@@ -66,8 +73,18 @@
 					}
 				}, 80 );
 		};
-
-		loader.setProgressFn( simulationFn );
+        
+        if( window.location.href.indexOf("#") > -1 ) {
+            classie.remove( container, 'loading' );
+            classie.add( container, 'loaded' );
+            classie.add( document.body, 'loading-complete' );
+            classie.remove( document.body, 'no-scroll' );
+            window.removeEventListener( 'scroll', noscroll );
+            classie.add( container, 'view' );
+        }
+        else {
+            loader.setProgressFn( simulationFn );
+        }
 	}
 	
 	function noscroll() {
