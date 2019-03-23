@@ -22,13 +22,93 @@ body.no-scroll.mobile{
 }
 
 button#menu-button{
+    background: none;
     display: block;
     position: absolute;
-    background-color: grey;
     height: 100%;
-    width: 2.5rem;
-    right: 0;
-    
+    width: 2.2rem;
+    right: 0;   
+    border: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: .5s ease-in-out;
+    -moz-transition: .5s ease-in-out;
+    -o-transition: .5s ease-in-out;
+    transition: .5s ease-in-out;
+    cursor: pointer;
+}
+
+button#menu-button:focus{
+    outline: none;
+}
+
+button#menu-button:focus span, button#menu-button:hover span{
+    background-color: #89da90;
+}
+
+button#menu-button span {
+    display: block;
+    position: absolute;
+    height: 4px;
+    width: 100%;
+    background: #221F1F;
+    border-radius: 2px;
+    opacity: 1;
+    left: 0;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: .25s ease;
+    -moz-transition: .25s ease;
+    -o-transition: .25s ease;
+    transition: .25s ease;
+}
+
+button#menu-button span:nth-child(1) {
+    top: 25%;
+}
+
+button#menu-button span:nth-child(4) {
+    bottom: calc(25% - 1px);
+}
+
+button#menu-button:focus span:nth-child(1), button#menu-button:hover span:nth-child(1) {
+    top: 20%;
+}
+
+button#menu-button:focus span:nth-child(4), button#menu-button:hover span:nth-child(4) {
+    bottom: calc(20% - 1px);
+}
+
+button#menu-button.open span:nth-child(1) {
+    top: 0;
+}
+
+button#menu-button.open span:nth-child(4) {
+    bottom: 0;
+} 
+
+button#menu-button span:nth-child(2), button#menu-button span:nth-child(3) {
+    top: calc(50% - 2px);
+}
+
+button#menu-button.open span:nth-child(2) {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+button#menu-button.open span:nth-child(3) {
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
 }
 
 .menu-block{
@@ -112,29 +192,25 @@ svg .logo-pop{
 
 #main-menu .project-menu-select{
     position: relative;
-    background-color: #fff;
+    background-image: linear-gradient(to left, #fafafa 0%, #ffffff 30%, #89da90 70%, #89da90 100%);
+    background-size: 300% auto;
     display:flex;
+    background-position: right center;
     align-content: center;
     height: calc(100% / 6);
     width: 100%;
     color: #000;
     border-bottom: 1px solid #89da90;
-    -webkit-transition: background-color 200ms ease;
-    -moz-transition: background-color 200ms ease;
-    -ms-transition: background-color 200ms ease;
-    -o-transition: background-color 200ms ease;
-    transition: background-color 200ms ease;
+    -webkit-transition: .25s cubic-bezier(0.645, 0.045, 0.355, 1);
+    -moz-transition: .25s cubic-bezier(0.645, 0.045, 0.355, 1);
+    -ms-transition: .25s cubic-bezier(0.645, 0.045, 0.355, 1);
+    -o-transition: .25s cubic-bezier(0.645, 0.045, 0.355, 1);
+    transition: .25s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
 #main-menu .project-menu-select:hover{
-    background-color: #f1f1f1;
+    background-position: left center;
     cursor: pointer;
-    -webkit-transition: background-color 200ms ease;
-    -moz-transition: background-color 200ms ease;
-    -ms-transition: background-color 200ms ease;
-    -o-transition: background-color 200ms ease;
-    transition: background-color 200ms ease;
-
 }
 
 #main-menu .project-menu-select:first-of-type{
@@ -183,6 +259,7 @@ svg .logo-pop{
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
+    opacity: 0.9;
     flex-direction: column;
     top: 0;
     left: 0;
@@ -196,21 +273,7 @@ svg .logo-pop{
     width: 100vw;
     bottom: 0;
     z-index: 50;
-    /*-webkit-transition: right 400ms cubic-bezier(0.645, 0.045, 0.355, 1);
-    -moz-transition: right 400ms cubic-bezier(0.645, 0.045, 0.355, 1);
-    -ms-transition: right 400ms cubic-bezier(0.645, 0.045, 0.355, 1);
-    -o-transition: right 400ms cubic-bezier(0.645, 0.045, 0.355, 1);
-    transition: right 400ms cubic-bezier(0.645, 0.045, 0.355, 1);*/
 }
-
-/*#footer.active{
-    right: 0;
-    -webkit-transition: right 400ms cubic-bezier(0.645, 0.045, 0.355, 1);
-    -moz-transition: right 400ms cubic-bezier(0.645, 0.045, 0.355, 1);
-    -ms-transition: right 400ms cubic-bezier(0.645, 0.045, 0.355, 1);
-    -o-transition: right 400ms cubic-bezier(0.645, 0.045, 0.355, 1);
-    transition: right 400ms cubic-bezier(0.645, 0.045, 0.355, 1);
-}*/
 
 #slide-controls{
     position: fixed;
@@ -266,22 +329,177 @@ svg .logo-pop{
     margin: 0 auto;
     height: 4rem;
     width: 4rem;
-    background-color: red;
+    padding: 0;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    outline: none;
+    background-color: #89da90;
+    border: 3px solid #89da90;
     border-radius: 50%;
-    border-color: #fff;
-    border-width: 3px;
-    -webkit-transition: background-color 400ms ease, border-color 400ms ease;
-    -moz-transition: background-color 400ms ease, border-color 400ms ease;
-    -ms-transition: background-color 400ms ease, border-color 400ms ease;
-    -o-transition: background-color 400ms ease, border-color 400ms ease;
-    transition: background-color 400ms ease, border-color 400ms ease;
+    -webkit-transition: .4s ease;
+    -moz-transition: .4s ease;
+    -ms-transition: .4s ease;
+    -o-transition: .4s ease;
+    transition: .4s ease;
+}
+
+.project-button:focus, .project-button:hover{
+    outline: none;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.3);
+    /*
+    -webkit-transform: scale(2);
+    -moz-transform: scale(2);
+    -o-transform: scale(2);
+    transform: scale(2);
+    */
+}
+
+.project-button:focus span, .project-button:hover span{
+    background-color: #221F11;
+}
+
+.project-button div{
+    width: 30%;
+    height: 100%;
+    top:0;
+    left: 33%;
+    position: absolute;
+    -webkit-transition: .25s ease;
+    -moz-transition: .25s ease;
+    -o-transition: .25s ease;
+    transition: .25s ease;
+}
+
+.project-button span{
+    display: block;
+    height: 4px;
+    width: 100%;
+    position: absolute;
+    background: #221F1F;
+    border-radius: 2px;
+    opacity: 1;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: .25s ease;
+    -moz-transition: .25s ease;
+    -o-transition: .25s ease;
+    transition: .25s ease;
+}
+
+.project-button span:nth-child(even) {
+    top: 55%;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.project-button span:nth-child(odd) {
+    bottom: 55%;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+.project-button.active span:nth-child(even) {
+    top: 57%;
+
+}
+
+.project-button.active span:nth-child(odd) {
+    bottom: 57%;
+
+}
+
+.project-button.active div{
+    width: 35%
+}
+
+.project-button.active div:nth-child(1){
+    -webkit-transform: rotateY(180deg) ;
+    -moz-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+    left:24%;
+}
+
+.project-button.active div:nth-child(2){
+    left: 44%;
+}
+/*
+.project-button span{
+    display: block;
+    position: absolute;
+    height: 4px;
+    width: 60%;
+    left: 20%;
+    background: #221F1F;
+    border-radius: 2px;
+    opacity: 1;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: .25s ease;
+    -moz-transition: .25s ease;
+    -o-transition: .25s ease;
+    transition: .25s ease;
 }
 
 .project-button.active{
     background-color: rgba(255, 255, 255, 0);
     border-color: #221F1F;
-    
 }
+
+.project-button span:nth-child(1) {
+    width: 30%;
+    top: 55%;
+    left: calc(20% - 2px);
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.project-button span:nth-child(4) {
+    width: 30%;
+    bottom: 55%;
+    left: calc(20% - 2px);
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+.project-button.active span:nth-child(1) {
+    opacity: 0;
+}
+
+.project-button.active span:nth-child(4) {
+    opacity: 0;
+} 
+
+.project-button span:nth-child(2), .project-button span:nth-child(3) {
+    top: calc(50% - 2px);
+}
+
+.project-button.active span:nth-child(2) {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.project-button.active span:nth-child(3) {
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+*/
 
 .project-content{
     position: absolute;
@@ -522,7 +740,6 @@ svg .logo-pop{
         position: absolute;
         top: calc(50vh - 2rem);
         left: calc(48vw - 6.25rem);
-        background-color: red;
         border-radius: 50%;
         z-index: 50;
     }
@@ -627,7 +844,7 @@ svg .logo-pop{
     }
     
     .project-button{
-        left: calc(35vw - 6.25rem);
+        left: calc(35vw - 6.15rem);
     }
     
     .project-content{
