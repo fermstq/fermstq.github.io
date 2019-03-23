@@ -10,6 +10,7 @@ $(document).ready(function() {
     
     $('#menu-button').click (function(e) {
         e.preventDefault();
+        $('#menu-button').toggleClass ('open');
         $('#main-menu').toggleClass ('hide view');
         $('#footer').toggleClass ('hide view');
         $('.no-scroll').toggleClass ('mobile');
