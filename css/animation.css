@@ -1,0 +1,330 @@
+/* TILE INTERACTIONS */
+
+.tile-trigger, button.trigger{
+    -webkit-animation: tileNormal var(--fast-speed) var(--easy-ease) both;
+	animation: tileNormal var(--fast-speed) var(--easy-ease) both;
+}
+
+.tile-trigger .tile:before{
+    transform: translateX(-50%);
+}
+
+.tile-trigger .tile .contents .title, .tile-trigger .tile .contents .description, button.trigger strong{
+    -webkit-animation: contentsNormal var(--fast-speed) var(--easy-ease) both;
+	animation: contentsNormal var(--fast-speed) var(--easy-ease) both;
+}
+
+.tile-trigger .tile .contents .title h3, .tile-trigger .tile .contents .title .summary {
+    -webkit-animation: fadeIn var(--slow-speed) var(--easy-ease) both;
+	animation: fadeIn var(--slow-speed) var(--easy-ease) both;
+}
+
+.tile-trigger .tile .description .summary{
+    -webkit-animation: fadeOutUp var(--fast-speed) var(--easy-ease) both;
+	animation: fadeOutUp var(--fast-speed) var(--easy-ease) both;
+}
+
+.tile-trigger .tile.image.no-desc .inner::before{
+    content:none;
+    -webkit-animation: none;
+	animation: none;
+    -webkit-animation-delay: none;
+	animation-delay: none;
+}
+
+.tile-trigger .tile:focus{
+    outline: 0;
+}
+
+/* Add focus animations */
+
+.tile-trigger .tile:focus inner:after{
+    
+}
+
+.tile-trigger:hover .tile:before, button.trigger:hover::before {
+    box-shadow: var(--hover-shadow-element);
+}
+
+.tile-trigger:hover .tile:after, button.trigger:hover::after {
+    box-shadow: var(--hover-shadow);
+}
+
+
+.tile-trigger:hover, button.trigger:hover{
+    -webkit-animation: tileHover var(--fast-speed) var(--easy-ease) both;
+	animation: tileHover var(--fast-speed) var(--easy-ease) both;
+}
+
+.tile-trigger:hover .contents .description, button.trigger:hover strong{
+    -webkit-animation: contentsHover var(--fast-speed) var(--easy-ease) both;
+	animation: contentsHover var(--fast-speed) var(--easy-ease) both;
+}
+
+.tile-trigger .tile.image .inner::before{
+    -webkit-animation: fadeOut var(--normal-speed) var(--easy-ease) both;
+	animation: fadeOut var(--normal-speed) var(--easy-ease) both;
+}
+
+.tile-trigger .tile .inner:after{
+    -webkit-animation: tileInactive var(--normal-speed) var(--easy-ease) both;
+	animation: tileInactive var(--normal-speed) var(--easy-ease) both;
+}
+
+
+.tile-trigger.active .tile .inner:after{
+    -webkit-animation: tileActive var(--normal-speed) var(--easy-ease) both;
+	animation: tileActive var(--normal-speed) var(--easy-ease) both;
+}
+
+.tile-trigger.active .tile.image .inner::before{
+    -webkit-animation: fadeInLow var(--slow-speed) var(--easy-ease) both;
+	animation: fadeInLow var(--slow-speed) var(--easy-ease) both;
+    -webkit-animation-delay: var(--fast-speed);
+	animation-delay: var(--fast-speed);
+}
+
+.tile-trigger.active .tile.image.no-desc .inner::before{
+    -webkit-animation: none;
+	animation: none;
+    -webkit-animation-delay: none;
+	animation-delay: none;
+}
+
+.tile-trigger.active .tile .title h3, .tile-trigger.active .tile .title .summary {
+    -webkit-animation: fadeOut var(--normal-speed) var(--easy-ease) both;
+	animation: fadeOut var(--normal-speed) var(--easy-ease) both;
+}
+
+.tile-trigger.active .tile .summary{
+    -webkit-animation: fadeInDown var(--slow-speed) var(--easy-ease) both;
+	animation: fadeInDown var(--slow-speed) var(--easy-ease) both;
+    -webkit-animation-delay: var(--fast-speed);
+	animation-delay: var(--fast-speed);
+}
+
+
+
+
+
+
+@-webkit-keyframes contentsHover {
+	to { -webkit-transform: scale(0.95); transform:scale(0.95); }
+}
+
+@keyframes contentsHover {
+	to { transform:scale(0.95); }
+}
+
+@-webkit-keyframes contentsNormal {
+	from { -webkit-transform: scale(0.95); transform:scale(0.95); }
+}
+
+@keyframes contentsNormal {
+	from { transform:scale(0.95); }
+}
+
+
+
+@-webkit-keyframes tileHover {
+	to { -webkit-transform: scale(1.05); transform:scale(1.05); }
+}
+
+@keyframes tileHover {
+	to { transform:scale(1.05);  }
+}
+
+@-webkit-keyframes tileNormal {
+	from { -webkit-transform: scale(1.05); transform:scale(1.05); }
+}
+
+@keyframes tileNormal {
+	from { transform:scale(1.05); }
+}
+
+
+@-webkit-keyframes tileActive {
+	to { opacity: 0.9; width: 100%; height: 100%; border-radius: var(--border-radius-std); }
+}
+
+@keyframes tileActive {
+	to { opacity: 0.9; width: 100%; height: 100%; border-radius: var(--border-radius-std);}
+}
+
+@-webkit-keyframes tileInactive {
+	from { opacity: 0.9; width: 100%; height: 100%; border-radius: var(--border-radius-std); }
+}
+
+@keyframes tileInactive {
+	from { opacity: 0.9; width: 100%; height: 100%; border-radius: var(--border-radius-std);}
+}
+
+
+/* Accordion Animations */
+
+.accordion > .contents {
+    max-height: 1250px;
+    -webkit-transition: max-height var(--normal-speed) ease-in-out;
+    -moz-transition: max-height var(--normal-speed) ease-in-out;
+    -o-transition: max-height var(--normal-speed) ease-in-out;
+    transition: max-height var(--normal-speed) ease-in-out;
+}
+
+.accordion.close > .contents {
+    overflow: hidden;
+    max-height: 0;
+}
+
+.accordion > .contents > div {
+    -webkit-animation: fadeInDown var(--slow-speed) var(--easy-ease) both;
+	animation: fadeInDown var(--slow-speed) var(--easy-ease) both;
+    -webkit-animation-delay: var(--fast-speed);
+	animation-delay: var(--fast-speed);
+}
+
+.accordion.close > .contents > div{
+    -webkit-animation: fadeOut var(--fast-speed) var(--easy-ease) both;
+	animation: fadeOut var(--fast-speed) var(--easy-ease) both;
+}
+
+.accordion span.expanded{
+    display: inline;
+}
+
+.accordion span.collapsed{
+    display: none;
+}
+
+.accordion.close span.expanded{
+    display: none;
+}
+
+.accordion.close span.collapsed{
+    display: inline;
+}
+
+
+
+
+/* Default Animations */
+
+
+@-webkit-keyframes fadeOut{
+	to { opacity: 0; }
+}
+
+@keyframes fadeOut {
+	to { opacity: 0; }
+}
+
+@-webkit-keyframes fadeIn{
+	from { opacity: 0; }
+}
+
+@keyframes fadeIn {
+	from { opacity: 0; }
+}
+
+@-webkit-keyframes fadeInLow{
+	from { opacity: 0; }
+}
+
+@keyframes fadeInLow {
+	from { opacity: 0; }
+}
+
+
+@-webkit-keyframes fadeInDown {
+	from { opacity: 0; -webkit-transform: translateY(-1rem); transform: translateY(-1rem); }
+}
+
+@keyframes fadeInDown {
+	from { opacity: 0; transform: translateY(-1rem); }
+}
+
+@-webkit-keyframes fadeOutUp {
+	to { opacity: 0; -webkit-transform: translateY(-1rem); transform: translateY(-1rem); }
+}
+
+@keyframes fadeOutUp {
+	to { opacity: 0; transform: translateY(-1rem); }
+}
+
+
+
+
+/*
+
+
+
+.tile-trigger .tile .contents{
+    -webkit-animation: contentsNormal var(--normal-speed) var(--easy-ease) both;
+	animation: contentsNormal var(--normal-speed) var(--easy-ease) both;
+}
+
+
+@-webkit-keyframes contentsHover {
+	to { -webkit-transform: scale(0.97) translateY(-1px); transform:scale(0.97) translateY(-1px); }
+}
+
+@keyframes contentsHover {
+	to { transform:scale(0.97) translateY(-1px); }
+}
+
+@-webkit-keyframes contentsNormal {
+	from { -webkit-transform: scale(0.97) translateY(-1px); transform:scale(0.97) translateY(-1px); }
+}
+
+@keyframes contentsNormal {
+	from { transform:scale(0.97) translateY(-1px); }
+}
+
+*/
+
+
+/* MOBILE PLUS */
+
+@media screen and (min-width: 35rem ) {
+    
+    /* TILE INTERACTIONS */
+    
+
+    
+}
+
+
+
+/* TABLET */
+
+@media screen and (min-width: 55rem ) {
+    
+    /* TILE INTERACTIONS */
+    
+
+    
+}
+
+
+
+/* DESKOP */
+
+@media screen and (min-width: 70rem ) {
+    
+    /* TILE INTERACTIONS */
+    
+
+    
+}
+
+
+
+/* DESKTOP PLUS */
+
+@media screen and (min-width: 90rem ) {
+    
+    /* TILE INTERACTIONS */
+    
+
+    
+}
+
