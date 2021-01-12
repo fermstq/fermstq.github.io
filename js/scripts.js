@@ -51,6 +51,22 @@ $(document).ready(function() {
         $('#footer').toggleClass ('hide view');
     });
     
+    
+    // Skillset Tile Clicks
+    $('.tile').click (function(e) {
+        e.preventDefault();
+        $(this).parent().toggleClass('active');
+    });
+    
+    // Accoridon
+                                
+    $('.trigger').click (function(e) {
+        e.preventDefault();
+        $(this).parent('.accordion').toggleClass('close');
+    });
+    
+    $('.accordion').addClass('close');
+    
 }); 
 
 
@@ -173,3 +189,4 @@ $(document).ready(function() {
     }, false);
     
 })();
+
