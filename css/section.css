@@ -206,7 +206,10 @@ section#projects .contents .title .summary{
     
     section#skillset .accordion.close > .contents > div{
         -webkit-animation: fadeInDown var(--fast-speed) var(--easy-ease) both;
-	    animation: fadeInDown var(--fast-speed) var(--easy-ease) both;
+        animation-name: fadeInDown;
+        animation-duration: var(--fast-speed);
+        animation-timing-function: var(--ease-ease);
+        animation-fill-mode: both;
     }
     
     section#skillset .accordion button.trigger{

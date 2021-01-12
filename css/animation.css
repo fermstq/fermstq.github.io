@@ -53,53 +53,79 @@
 
 .tile-trigger:hover, button.trigger:hover{
     -webkit-animation: tileHover var(--fast-speed) var(--easy-ease) both;
-	animation: tileHover var(--fast-speed) var(--easy-ease) both;
+    animation-name: tileHover;
+    animation-duration: var(--fast-speed);
+    animation-timing-function: var(--ease-ease);
+    animation-fill-mode: both;
 }
 
 .tile-trigger:hover .contents .description, button.trigger:hover strong{
     -webkit-animation: contentsHover var(--fast-speed) var(--easy-ease) both;
-	animation: contentsHover var(--fast-speed) var(--easy-ease) both;
+    animation-name: contentsHover;
+    animation-duration: var(--fast-speed);
+    animation-timing-function: var(--ease-ease);
+    animation-fill-mode: both;
 }
 
 .tile-trigger .tile.image .inner::before{
     -webkit-animation: fadeOut var(--normal-speed) var(--easy-ease) both;
-	animation: fadeOut var(--normal-speed) var(--easy-ease) both;
+    animation-name: fadeOut;
+    animation-duration: var(--normal-speed);
+    animation-timing-function: var(--ease-ease);
+    animation-fill-mode: both;
 }
 
 .tile-trigger .tile .inner:after{
     -webkit-animation: tileInactive var(--normal-speed) var(--easy-ease) both;
-	animation: tileInactive var(--normal-speed) var(--easy-ease) both;
+    animation-name: tileInactive;
+    animation-duration: var(--normal-speed);
+    animation-timing-function: var(--ease-ease);
+    animation-fill-mode: both;
 }
 
 
 .tile-trigger.active .tile .inner:after{
     -webkit-animation: tileActive var(--normal-speed) var(--easy-ease) both;
 	animation: tileActive var(--normal-speed) var(--easy-ease) both;
+    animation-name: tileActive;
+    animation-duration: var(--normal-speed);
+    animation-timing-function: var(--ease-ease);
+    animation-fill-mode: both;
 }
 
 .tile-trigger.active .tile.image .inner::before{
     -webkit-animation: fadeInLow var(--slow-speed) var(--easy-ease) both;
-	animation: fadeInLow var(--slow-speed) var(--easy-ease) both;
     -webkit-animation-delay: var(--fast-speed);
+    animation-name: fadeInLow;
+    animation-duration: var(--slow-speed);
+    animation-timing-function: var(--ease-ease);
+    animation-fill-mode: both;
 	animation-delay: var(--fast-speed);
 }
 
 .tile-trigger.active .tile.image.no-desc .inner::before{
     -webkit-animation: none;
-	animation: none;
     -webkit-animation-delay: none;
+    animation: none
 	animation-delay: none;
 }
 
 .tile-trigger.active .tile .title h3, .tile-trigger.active .tile .title .summary {
     -webkit-animation: fadeOut var(--normal-speed) var(--easy-ease) both;
-	animation: fadeOut var(--normal-speed) var(--easy-ease) both;
+    animation-name: fadeOut;
+    animation-duration: var(--normal-speed);
+    animation-timing-function: var(--ease-ease);
+    animation-fill-mode: both;
+    
 }
 
 .tile-trigger.active .tile .summary{
     -webkit-animation: fadeInDown var(--slow-speed) var(--easy-ease) both;
-	animation: fadeInDown var(--slow-speed) var(--easy-ease) both;
     -webkit-animation-delay: var(--fast-speed);
+    animation-name: fadeInDown;
+    animation-duration: var(--slow-speed);
+    animation-timing-function: var(--ease-ease);
+    animation-fill-mode: both;
 	animation-delay: var(--fast-speed);
 }
 
@@ -177,14 +203,20 @@
 
 .accordion > .contents > div {
     -webkit-animation: fadeInDown var(--slow-speed) var(--easy-ease) both;
-	animation: fadeInDown var(--slow-speed) var(--easy-ease) both;
     -webkit-animation-delay: var(--fast-speed);
+    animation-name: fadeInDown;
+    animation-duration: var(--slow-speed);
+    animation-timing-function: var(--ease-ease);
+    animation-fill-mode: both;
 	animation-delay: var(--fast-speed);
 }
 
-.accordion.close > .contents > div{
+.accordion.close > .contents > div {
     -webkit-animation: fadeOut var(--fast-speed) var(--easy-ease) both;
-	animation: fadeOut var(--fast-speed) var(--easy-ease) both;
+    animation-name: fadeOut;
+    animation-duration: var(--fast-speed);
+    animation-timing-function: var(--ease-ease);
+    animation-fill-mode: both;
 }
 
 .accordion span.expanded{
