@@ -16,8 +16,9 @@
         <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#89da90">
         <meta name="msapplication-TileColor" content="#89da90">
         <meta name="theme-color" content="#f1f1f1">
-		<link rel="stylesheet" type="text/css" href="css/normalize.css" />
-        <link rel="stylesheet" type="text/css" href="css/compiled.css">
+        <link rel="stylesheet" type="text/css" href="css/normalize.css">
+		<link rel="stylesheet" type="text/css" href="css/compiled.css">
+        <link rel="stylesheet" type="text/css" href="css/animation.css">
 		<script src="js/modernizr.custom.js"></script>
         <script src="js/jquery-3.2.1.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
@@ -25,7 +26,7 @@
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Quicksand:wght@300;400;500;600;700&display=swap&family=Comfortaa:wght@700">
     </head>
-    <body id="#top" class="no-scroll">
+    <body id="top">
         <div class="content-wrapper">
             <!-- initial header -->
             <header>
@@ -115,8 +116,8 @@
                                                 z M266.9,219.6c0-2.6-0.2-3.7-1.4-3.7s-1.4,1.1-1.4,3.7c0,2.6,0.2,3.7,1.4,3.7S266.9,222.2,266.9,219.6z"/>
                                         </g>
                                         <g class="ease">
-                                            <path class="bg-color-blue" d="M230.425,62.452h-22.662c-0.909,0-1.647,0.737-1.647,1.647v22.563L230.425,62.452z"/>
-                                            <ellipse class="bg-color-green" cx="119.757" cy="77.862" rx="14.218" ry="14.218"/>
+                                            <path class="bg-color-light-blue" d="M230.425,62.452h-22.662c-0.909,0-1.647,0.737-1.647,1.647v22.563L230.425,62.452z"/>
+                                            <ellipse class="bg-color-light-green" cx="119.757" cy="77.862" rx="14.218" ry="14.218"/>
                                             <line class="loading-bar" x1="27.744" y1="143.346" x2="27.744" y2="10.478"/>
                                         </g>
                                     </svg>
@@ -132,6 +133,20 @@
                             <span></span>
                         </button>
                     </div>
+                </nav>
+                <nav id="main-menu" class="hide">
+                    <ul>
+                        <li><a>About</a></li>
+                        <li><a>Project 1</a></li>
+                        <li><a>Project 2</a></li>
+                        <li><a>Project 3</a></li>
+                        <li><a>Project 4</a></li>
+                        <li><a>Project 5</a></li>
+                        <li><a>Project 6</a></li>
+                        <li><a>Project 7</a></li>
+                        <li><a>Project 8</a></li>
+                        <li><a>Download Resume</a></li>
+                    </ul>
                 </nav>
             </header>
 
@@ -149,7 +164,7 @@
                                 </div>
                                 <div class="grid-item-xs-4 grid-item-md-1"></div>
                                 <div class="grid-item-xs-24 grid-item-md-12 lg_padding-md lg_padding-vertical-sm">
-                                    <h2 class="text-align-center md_text-align-left margin-bottom-sm"><span class="h1 block">Hi, I'm Quin!</span><span class="block subhead font-size-md">Welcome to my portfolio</span>
+                                    <h2 class="text-align-center md_text-align-left margin-bottom-sm"><span class="h1 block">Hi, I'm Quin!</span><span class="block subhead font-size-md">Welcome to my portfolio<span class="sr-only">.</span></span>
                                     </h2>
                                     <p class="text-align-center md_text-align-left margin-bottom-0 sm_padding-md sm_padding-vertical-0 md_padding-0">I’m a passionate designer dedicated to developing meaningful user experiences that make lasting impressions and connects audiences with brands.</p>
                                 </div>
@@ -159,12 +174,12 @@
                 </div>
             </section>
             <section id="skillset">
-                <h2 class="h2 text-align-center margin-bottom-sm md_margin-bottom-md">Skillsets</h2>
-                <div id="color-key" class="flex-column md_flex-row margin-bottom-lg">
+                <h2 class="h2 text-align-center margin-bottom-md">Skillsets</h2>
+                <div id="color-key" class="flex-column md_flex-row margin-bottom-md xl_margin-bottom-lg">
                     <div class="wrapper flex-column md_flex-row">
-                        <p class="subhead">Passionate Creative</p>
-                        <p class="subhead">User-Centered Mindset</p>
-                        <p class="subhead">Dynamic Strategist</p>
+                        <p class="subhead">Passionate Creative<span class="sr-only">.</span></p>
+                        <p class="subhead">User-Centered Mindset<span class="sr-only">.</span></p>
+                        <p class="subhead">Dynamic Strategist<span class="sr-only">.</span></p>
                     </div>
                 </div>
                 <div class="grid-wrapper margin-bottom-sm">
@@ -422,7 +437,7 @@
                                                     <h3 class="subhead">Modular Design Systems</h3>
                                                 </div>
                                                 <div class="description">
-                                                    <p class="summary">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco l...</p>
+                                                    <p class="summary">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco. </p>
                                                 </div>
                                             </div>
                                         </div>
@@ -437,32 +452,56 @@
                 
             </section>
             
-            <section id="projects">
-                <h2 class="h2 text-align-center margin-bottom-lg">Projects</h2>
+            <section id="projects" class="lg_padding-vertical-md xl_padding-vertical-lg">
+                <h2 class="h2 text-align-center margin-bottom-lg lg_margin-bottom-xl">Projects</h2>
                 
                 <div class="grid-wrapper">
-                    <div class="grid-item-xs-12 grid-item-md-6" id="proj-1">
-                        <div class="tile-trigger">
-                            <button class="tile image no-desc highlight-top">
+                    <div class="grid-item-xs-12" id="proj-1">
+                        <div class="tile-trigger gradient-red">
+                            <button class="tile image highlight-top md_highlight-right"> <!-- add no-desc class and comment out description to hide content preivew effect -->
                                 <div class="inner">
                                     <div class="contents">
-                                        <div class="title padding-sm sm_padding-md sm_padding-vertical-sm">
-                                            <h3 class="text-align-left margin-bottom-sm">Wedding Signage</h3>
-                                            <p class="summary">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco l...</p>
+                                        <div class="title">
+                                            <p class="prehead">Personal Project</p>
+                                            <h3 class="margin-bottom-sm">Wedding Signage</h3>
+                                            <p class="summary">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
                                         </div>
-                                        <!--<div class="description">
-                                            <p class="summary">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco l...</p>
-                                        </div>-->
+                                        <p class="project-details"><span class="sr-only">Project timeline: </span>2020</p>
+                                        <div class="description">
+                                            <p class="summary">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+                                        </div>
                                     </div>
                                 </div>
 
                             </button>
                             <div class="tile-cta">
-                                <a href="google.com" class="cta bg-gradient-full-red"><span class="subhead color-white">Read More</span></a>
+                                <a href="google.com" class="cta"><span class="subhead">Project Details</span></a>
                             </div>
                         </div>
                     </div>
-                    
+                    <div class="grid-item-xs-12" id="proj-2">
+                        <div class="tile-trigger gradient-green">
+                            <button class="tile image highlight-top md_highlight-right"> <!-- add no-desc class and comment out description to hide content preivew effect -->
+                                <div class="inner">
+                                    <div class="contents">
+                                        <div class="title">
+                                            <p class="prehead">DigiPen Institute of Technology</p>
+                                            <h3 class="margin-bottom-sm">Website Redesign</h3>
+                                            <p class="summary">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+                                        </div>
+                                        <p class="project-details"><span class="sr-only">Project timeline: </span>2016 - 2018</p>
+                                        <div class="description">
+                                            <p class="summary">This is an accessibility test. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </button>
+                            <div class="tile-cta">
+                                <a href="google.com" class="cta"><span class="subhead">Project Details</span></a>
+                            </div>
+                        </div>
+                    </div>
                     
                     
                 </div>
