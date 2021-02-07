@@ -1,9 +1,70 @@
 /* NAVIGATION */
 
-#main-menu ul::before{
-    -webkit-animation: fadeOut var(--slow-speed) var(--easy-ease) both;
+header.scrollUp.fixed{
+    -webkit-animation: navEnter var(--normal-speed) var(--easy-ease) both;
+    -webkit-animation-delay: var(--fast-speed);
+    animation-name: navEnter;
+    animation-duration: var(--normal-speed);
+    animation-timing-function: var(--ease-ease);
+    animation-fill-mode: both;
+    animation-delay: var(--fast-speed);
+}
+
+header.fixed{
+    -webkit-animation: navExit 0ms var(--easy-ease) both;
+    animation-name: navExit;
+    animation-duration: 0ms;
+    animation-timing-function: var(--ease-ease);
+    animation-fill-mode: both;
+}
+
+header.fixed.scrollDepth{
+    -webkit-animation-duration: var(--fast-speed);
+    -webkit-animation-delay: var(--fast-speed);
+    animation-duration: var(--fast-speed);
+    animation-delay: var(--fast-speed);
+}
+
+
+header.fixed button#menu-button span:nth-child(1), header.fixed button#menu-button span:nth-child(4), header button#menu-button span:nth-child(1), header button#menu-button span:nth-child(4) {
+    -webkit-animation: fadeIn var(--normal-speed) var(--easy-ease) both;
+    animation-name: fadeIn;
+    animation-duration: var(--normal-speed);
+    animation-timing-function: var(--ease-ease);
+    animation-fill-mode: both;
+}
+
+header.fixed button#menu-button.open span:nth-child(1), header.fixed button#menu-button.open span:nth-child(4), header button#menu-button.open span:nth-child(1), header button#menu-button.open span:nth-child(4) {
+    -webkit-animation: fadeOut var(--normal-speed) var(--easy-ease) both;
     animation-name: fadeOut;
-    animation-duration: var(--slow-speed);
+    animation-duration: var(--normal-speed);
+    animation-timing-function: var(--ease-ease);
+    animation-fill-mode: both;
+}
+
+
+#main-menu{
+    -webkit-animation: menuExit 10ms var(--easy-ease) both;
+    -webkit-animation-delay: var(--slow-speed);
+    animation-name: menuExit;
+    animation-duration: 10ms;
+    animation-timing-function: var(--ease-ease);
+    animation-fill-mode: both;
+	animation-delay: var(--slow-speed);
+}
+
+#main-menu.view{
+    -webkit-animation: menuEnter 10ms var(--easy-ease) both;
+    animation-name: menuEnter;
+    animation-duration: 10ms;
+    animation-timing-function: var(--ease-ease);
+    animation-fill-mode: both;
+}
+
+#main-menu ul::before{
+    -webkit-animation: fadeOut var(--fast-speed) var(--easy-ease) both;
+    animation-name: fadeOut;
+    animation-duration: var(--fast-speed);
     animation-timing-function: var(--ease-ease);
     animation-fill-mode: both;
 }
@@ -17,9 +78,9 @@
 }
 
 #main-menu li{
-    -webkit-animation: fadeOut var(--slow-speed) var(--easy-ease) both;
+    -webkit-animation: fadeOut var(--fast-speed) var(--easy-ease) both;
     animation-name: fadeOut;
-    animation-duration: var(--slow-speed);
+    animation-duration: var(--fast-speed);
     animation-timing-function: var(--ease-ease);
     animation-fill-mode: both;
 }
@@ -271,6 +332,42 @@ section#projects .tile-trigger:hover .contents .description{
 
 
 
+@-webkit-keyframes navEnter {
+	from { -webkit-transform: translateY(-10rem); transform: translateY(-10rem); opacity: 0; }
+}
+
+@keyframes navEnter {
+	from { transform: translateY(-10rem); opacity: 0;}
+}
+
+@-webkit-keyframes navExit {
+	to { -webkit-transform: translateY(-10rem); transform: translateY(-10rem); opacity: 0; }
+}
+
+@keyframes navExit {
+	to { transform: translateY(-10rem); opacity: 0;}
+}
+
+
+
+@-webkit-keyframes menuEnter {
+	to { left: 0; }
+}
+
+@keyframes menuEnter {
+	to { left: 0; }
+}
+
+@-webkit-keyframes menuExit {
+	to { left: 100vw; }
+}
+
+@keyframes menuExit {
+	to { left: 100vw; }
+}
+
+
+
 @-webkit-keyframes contentsHover {
 	to { -webkit-transform: scale(0.95); transform:scale(0.95); }
 }
@@ -369,7 +466,7 @@ section#projects .tile-trigger:hover .contents .description{
 /* Accordion Animations */
 
 .accordion > .contents {
-    max-height: 1250px;
+    max-height: 1350px;
     -webkit-transition: max-height var(--normal-speed) ease-in-out;
     -moz-transition: max-height var(--normal-speed) ease-in-out;
     -o-transition: max-height var(--normal-speed) ease-in-out;
@@ -382,6 +479,7 @@ section#projects .tile-trigger:hover .contents .description{
 }
 
 .accordion > .contents > div {
+    visibility: visible;
     -webkit-animation: fadeInDown var(--slow-speed) var(--easy-ease) both;
     -webkit-animation-delay: var(--fast-speed);
     animation-name: fadeInDown;
@@ -422,44 +520,44 @@ section#projects .tile-trigger:hover .contents .description{
 
 
 @-webkit-keyframes fadeOut{
-	to { opacity: 0; }
+	to { opacity: 0; visibility: hidden; }
 }
 
 @keyframes fadeOut {
-	to { opacity: 0; }
+	to { opacity: 0; visibility: hidden; }
 }
 
 @-webkit-keyframes fadeIn{
-	from { opacity: 0; }
+	from { opacity: 0; visibility: hidden; }
 }
 
 @keyframes fadeIn {
-	from { opacity: 0; }
+	from { opacity: 0; visibility: hidden; }
 }
 
 @-webkit-keyframes fadeInLow{
-	from { opacity: 0; }
+	from { opacity: 0; visibility: hidden; }
 }
 
 @keyframes fadeInLow {
-	from { opacity: 0; }
+	from { opacity: 0; visibility: hidden; }
 }
 
 
 @-webkit-keyframes fadeInDown {
-	from { opacity: 0; -webkit-transform: translateY(-1rem); transform: translateY(-1rem); }
+	from { opacity: 0; -webkit-transform: translateY(-1rem); transform: translateY(-1rem); visibility: visible; }
 }
 
 @keyframes fadeInDown {
-	from { opacity: 0; transform: translateY(-1rem); }
+	from { opacity: 0; transform: translateY(-1rem); visibility: visible; }
 }
 
 @-webkit-keyframes fadeOutUp {
-	to { opacity: 0; -webkit-transform: translateY(-1rem); transform: translateY(-1rem); }
+	to { opacity: 0; -webkit-transform: translateY(-1rem); transform: translateY(-1rem); visibility: hidden; }
 }
-
+ 
 @keyframes fadeOutUp {
-	to { opacity: 0; transform: translateY(-1rem); }
+	to { opacity: 0; transform: translateY(-1rem); visibility: hidden; }
 }
 
 
@@ -496,10 +594,16 @@ section#projects .tile-trigger:hover .contents .description{
 
 @media screen and (min-width: 35rem ) {
     
-    /* TILE INTERACTIONS */
-    
+    header button#menu-button span:nth-child(1), header button#menu-button span:nth-child(4) {
+        -webkit-animation: none;
+        animation: none;
+    }
 
-    
+    header button#menu-button.open span:nth-child(1), header button#menu-button.open span:nth-child(4) {
+        -webkit-animation: none;
+        animation: none;
+    }
+
 }
 
 
@@ -507,6 +611,11 @@ section#projects .tile-trigger:hover .contents .description{
 /* TABLET */
 
 @media screen and (min-width: 55rem ) {
+    
+    header.fixed{
+        -webkit-animation-duration: var(--fast-speed);
+        animation-duration: var(--fast-speed);
+    }
     
     /*section#projects .tile-trigger.active .tile .title h3,  section#projects  .tile-trigger.active .tile .title .summary{
         display:none;
@@ -536,8 +645,7 @@ section#projects .tile-trigger:hover .contents .description{
 /* DESKOP */
 
 @media screen and (min-width: 70rem ) {
-    
-    /* TILE INTERACTIONS */
+
     
 
     

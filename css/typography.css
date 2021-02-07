@@ -1,0 +1,166 @@
+::selection{
+    background-color: var(--color-light-grey);
+    color: var(--color-black);
+}
+
+html {
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%
+}
+
+body {
+    margin: 0;
+    font: 1em/1.6 system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Droid Sans, Helvetica Neue, Fira Sans, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    color: var(--color-charcoal-grey);
+}
+
+h1,h2,h3,h4,h5,h6 {
+    margin: 0; 
+    font-weight: normal;
+    font-family:'Abril Fatface', serif; 
+    line-height:1;
+    letter-spacing: var(--kerning-sm);
+    color: var(--color-black)
+}
+
+.h1{
+    font-size: var(--font-xxl);
+    margin-bottom: var(--fluid-spacing-xs);
+}
+
+h2{
+    font-size: var(--font-xl);
+}
+
+h3{
+    font-size: var(--font-lg);
+    line-height: 1.2;
+}
+
+
+.subhead, #main-menu ul li{
+    font-family:'Quicksand', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: var(--kerning-lg);
+    font-size: var(--font-sm);
+    font-weight: var(--bold);
+    line-height:1.4;
+    color: var(--color-charcoal-grey);
+}
+
+p{
+    font-family:'Quicksand', sans-serif;
+    font-weight: var(--medium);
+    color: var(--color-dark-grey);
+    letter-spacing: var(--kerning-sm);
+    font-size: var(--font-md); 
+    margin-top: 0;
+    line-height: 1.6;
+}
+
+.prehead{
+    font-size: var(--font-xxs);
+    text-transform: uppercase;
+    color: var(--color-medium-grey);
+    letter-spacing: var(--kerning-xl);
+    font-weight: 900;
+    margin-bottom: var(--fluid-spacing-sm)
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+a:focus{
+    outline:0;
+}
+
+button {
+  -webkit-user-select: text;  /* Chrome all / Safari all */
+  -moz-user-select: text;     /* Firefox all */
+  -ms-user-select: text;      /* IE 10+ */
+  user-select: text;
+}
+
+button:focus {
+   outline: 0;
+}
+
+button.trigger{
+    margin: var(--fluid-spacing-sm) auto;
+    display: block;
+    padding: var(--spacing-sm) var(--spacing-md);
+    border: none;
+    border-radius: var(--border-radius-full);
+    background-color: var(--color-white);
+    position: relative;
+    font-family:'Comfortaa', sans-serif;
+    font-weight: 700;
+}
+
+button.trigger strong{
+    position: relative;
+    display: block;
+    color: var(--color-black);
+}
+
+button.trigger::before{
+    border-radius: var(--border-radius-full);  
+} 
+
+button.trigger::after{
+    border-radius: var(--border-radius-full);
+} 
+
+
+
+
+/* MOBILE PLUS */
+
+@media screen and (min-width: 35rem ) {
+    
+    /* TILE INTERACTIONS */
+    
+
+    
+}
+
+
+
+/* TABLET */
+
+@media screen and (min-width: 55rem ) {
+    
+
+    
+}
+
+
+
+/* DESKOP */
+
+@media screen and (min-width: 70rem ) {
+    
+    /* TILE INTERACTIONS */
+    
+
+    
+}
+
+
+
+/* DESKTOP PLUS */
+
+@media screen and (min-width: 90rem ) {
+    
+    /* TILE INTERACTIONS */
+    
+
+    
+}
+

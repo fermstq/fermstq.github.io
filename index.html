@@ -16,9 +16,14 @@
         <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#89da90">
         <meta name="msapplication-TileColor" content="#89da90">
         <meta name="theme-color" content="#f1f1f1">
-        <link rel="stylesheet" type="text/css" href="css/normalize.css">
-		<link rel="stylesheet" type="text/css" href="css/compiled.css">
+		<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+        <link rel="stylesheet" type="text/css" href="css/layout.css">
+        <link rel="stylesheet" type="text/css" href="css/typography.css">
+        <link rel="stylesheet" type="text/css" href="css/navigation.css">
+        <link rel="stylesheet" type="text/css" href="css/grid.css">
+        <link rel="stylesheet" type="text/css" href="css/section.css">
         <link rel="stylesheet" type="text/css" href="css/animation.css">
+        <link rel="stylesheet" type="text/css" href="css/variables.css">
 		<script src="js/modernizr.custom.js"></script>
         <script src="js/jquery-3.2.1.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
@@ -27,12 +32,12 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Quicksand:wght@300;400;500;600;700&display=swap&family=Comfortaa:wght@700">
     </head>
     <body id="top">
-        <div class="content-wrapper">
-            <!-- initial header -->
-            <header>
-                <nav class="grid-wrapper-lg vert-center">
-                    <div class="grid-item-xs-2"></div>
-                    <div class="grid-item-xs-20 margin-bottom-0">
+        <!-- initial header -->
+        <header id="header">
+            <div class="content-wrapper">
+                <nav id="main" class="grid-wrapper vert-center">
+                    <div class="grid-item-xs-1"></div>
+                    <div class="grid-item-xs-10 margin-bottom-0">
                         <div class="logo-container">
                             <h1>
                                 <a href="" target="_blank">
@@ -125,7 +130,7 @@
                             </h1>
                         </div>
                     </div>
-                    <div class="grid-item-xs-2">
+                    <div class="grid-item-xs-1">
                         <button id="menu-button">
                             <span></span>
                             <span></span>
@@ -136,19 +141,23 @@
                 </nav>
                 <nav id="main-menu" class="hide">
                     <ul>
-                        <li><a>About</a></li>
-                        <li><a>Project 1</a></li>
-                        <li><a>Project 2</a></li>
-                        <li><a>Project 3</a></li>
-                        <li><a>Project 4</a></li>
-                        <li><a>Project 5</a></li>
-                        <li><a>Project 6</a></li>
-                        <li><a>Project 7</a></li>
-                        <li><a>Project 8</a></li>
-                        <li><a>Download Resume</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Project 1</a></li>
+                        <li><a href="#">Project 2</a></li>
+                        <li><a href="#">Project 3</a></li>
+                        <li><a href="#">Project 4</a></li>
+                        <li><a href="#">Project 5</a></li>
+                        <li><a href="#">Project 6</a></li>
+                        <li><a href="#">Project 7</a></li>
+                        <li><a href="#">Project 8</a></li>
+                        <li><a href="#">Download Resume</a></li>
                     </ul>
                 </nav>
-            </header>
+            </div>  
+        </header>
+        
+        
+        <div class="content-wrapper">
 
             <!-- opening content -->
             <section id="about">
@@ -189,7 +198,7 @@
                                 <div class="inner">
                                     <div class="contents">
                                         <div class="title flex flex-row sm_flex-column vert-center">
-                                            <img src="img/placeholder-icon.svg" alt="" width="100%"/>
+                                            <img src="img/icons/visual-branding-icon.svg" alt="" width="100%"/>
                                             <h3 class="subhead">Visual Branding</h3>
                                         </div>
                                         <div class="description">
@@ -206,7 +215,7 @@
                                 <div class="inner">
                                     <div class="contents">
                                         <div class="title flex flex-row sm_flex-column vert-center">
-                                            <img src="img/placeholder-icon.svg" alt="" width="100%"/>
+                                            <img src="img/icons/ux-ui-icon.svg" alt="" width="100%"/>
                                             <h3 class="subhead">UX / UI Design</h3>
                                         </div>
                                         <div class="description">
@@ -219,12 +228,12 @@
                     </div>
                     <div class="grid-item-xs-12 grid-item-sm-6 grid-item-md-4">
                         <div class="tile-trigger">
-                            <button class="tile highlight-right sm_highlight-top gradient-green">
+                            <button class="tile highlight-right sm_highlight-top gradient-blue">
                                 <div class="inner">
                                     <div class="contents">
                                         <div class="title flex flex-row sm_flex-column vert-center">
-                                            <img src="img/placeholder-icon.svg" alt="" width="100%"/>
-                                            <h3 class="subhead">Accessibility</h3>
+                                            <img src="img/icons/frontend-dev-icon.svg" alt="" width="100%"/>
+                                            <h3 class="subhead">Frontend Development</h3>
                                         </div>
                                         <div class="description">
                                             <p class="summary">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco l...</p>
@@ -240,25 +249,8 @@
                                 <div class="inner">
                                     <div class="contents">
                                         <div class="title flex flex-row sm_flex-column vert-center">
-                                            <img src="img/placeholder-icon.svg" alt="" width="100%"/>
+                                            <img src="img/icons/email-marketing-icon.svg" alt="" width="100%"/>
                                             <h3 class="subhead">Email Marketing</h3>
-                                        </div>
-                                        <div class="description">
-                                            <p class="summary">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco l...</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="grid-item-xs-12 grid-item-sm-6 grid-item-md-4">
-                        <div class="tile-trigger">
-                            <button class="tile highlight-right sm_highlight-top gradient-blue">
-                                <div class="inner">
-                                    <div class="contents">
-                                        <div class="title flex flex-row sm_flex-column vert-center">
-                                            <img src="img/placeholder-icon.svg" alt="" width="100%"/>
-                                            <h3 class="subhead">Front-end Development</h3>
                                         </div>
                                         <div class="description">
                                             <p class="summary">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco l...</p>
@@ -274,7 +266,7 @@
                                 <div class="inner">
                                     <div class="contents">
                                         <div class="title flex flex-row sm_flex-column vert-center">
-                                            <img src="img/placeholder-icon.svg" alt="" width="100%"/>
+                                            <img src="img/icons/typography-icon.svg" alt="" width="100%"/>
                                             <h3 class="subhead">Typography</h3>
                                         </div>
                                         <div class="description">
@@ -285,37 +277,36 @@
                             </button>
                         </div>
                     </div>
-                    
+                    <div class="grid-item-xs-12 grid-item-sm-6 grid-item-md-4">
+                        <div class="tile-trigger">
+                            <button class="tile highlight-right sm_highlight-top gradient-green">
+                                <div class="inner">
+                                    <div class="contents">
+                                        <div class="title flex flex-row sm_flex-column vert-center">
+                                            <img src="img/icons/interaction-design-icon.svg" alt="" width="100%"/>
+                                            <h3 class="subhead">Interaction Design</h3>
+                                        </div>
+                                        <div class="description">
+                                            <p class="summary">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco l...</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </button>
+                        </div>
+                    </div>
                 </div>
-                
+
                 <div class="accordion">
                     <div class="contents">
                         <div class="grid-wrapper">
-                            <div class="grid-item-xs-12 grid-item-sm-6 grid-item-md-4">
-                                <div class="tile-trigger">
-                                    <button class="tile highlight-right sm_highlight-top gradient-green">
-                                        <div class="inner">
-                                            <div class="contents">
-                                                <div class="title flex flex-row sm_flex-column vert-center">
-                                                    <img src="img/placeholder-icon.svg" alt="" width="100%"/>
-                                                    <h3 class="subhead">Interaction Design</h3>
-                                                </div>
-                                                <div class="description">
-                                                    <p class="summary">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco l...</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </button>
-                                </div>
-                            </div>
                             <div class="grid-item-xs-12 grid-item-sm-6 grid-item-md-4">
                                 <div class="tile-trigger">
                                     <button class="tile highlight-right sm_highlight-top gradient-blue">
                                         <div class="inner">
                                             <div class="contents">
                                                 <div class="title flex flex-row sm_flex-column vert-center">
-                                                    <img src="img/placeholder-icon.svg" alt="" width="100%"/>
-                                                    <h3 class="subhead">CRM & CMS Architecture</h3>
+                                                    <img src="img/icons/crm-cms-management-icon.svg" alt="" width="100%"/>
+                                                    <h3 class="subhead">CRM & CMS Management</h3>
                                                 </div>
                                                 <div class="description">
                                                     <p class="summary">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco l...</p>
@@ -331,41 +322,7 @@
                                         <div class="inner">
                                             <div class="contents">
                                                 <div class="title flex flex-row sm_flex-column vert-center">
-                                                    <img src="img/placeholder-icon.svg" alt="" width="100%"/>
-                                                    <h3 class="subhead">Motion Graphics</h3>
-                                                </div>
-                                                <div class="description">
-                                                    <p class="summary">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco l...</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="grid-item-xs-12 grid-item-sm-6 grid-item-md-4">
-                                <div class="tile-trigger">
-                                    <button class="tile highlight-right sm_highlight-top gradient-red">
-                                        <div class="inner">
-                                            <div class="contents">
-                                                <div class="title flex flex-row sm_flex-column vert-center">
-                                                    <img src="img/placeholder-icon.svg" alt="" width="100%"/>
-                                                    <h3 class="subhead">Photo Editing</h3>
-                                                </div>
-                                                <div class="description">
-                                                    <p class="summary">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco l...</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="grid-item-xs-12 grid-item-sm-6 grid-item-md-4">
-                                <div class="tile-trigger">
-                                    <button class="tile highlight-right sm_highlight-top gradient-red">
-                                        <div class="inner">
-                                            <div class="contents">
-                                                <div class="title flex flex-row sm_flex-column vert-center">
-                                                    <img src="img/placeholder-icon.svg" alt="" width="100%"/>
+                                                    <img src="img/icons/graphic-design-icon.svg" alt="" width="100%"/>
                                                     <h3 class="subhead">Graphic Design</h3>
                                                 </div>
                                                 <div class="description">
@@ -382,7 +339,41 @@
                                         <div class="inner">
                                             <div class="contents">
                                                 <div class="title flex flex-row sm_flex-column vert-center">
-                                                    <img src="img/placeholder-icon.svg" alt="" width="100%"/>
+                                                    <img src="img/icons/accessibility-icon.svg" alt="" width="100%"/>
+                                                    <h3 class="subhead">Accessibility</h3>
+                                                </div>
+                                                <div class="description">
+                                                    <p class="summary">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco l...</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="grid-item-xs-12 grid-item-sm-6 grid-item-md-4">
+                                <div class="tile-trigger">
+                                    <button class="tile highlight-right sm_highlight-top gradient-red">
+                                        <div class="inner">
+                                            <div class="contents">
+                                                <div class="title flex flex-row sm_flex-column vert-center">
+                                                    <img src="img/icons/photo-editing-icon.svg" alt="" width="100%"/>
+                                                    <h3 class="subhead">Photo Editing</h3>
+                                                </div>
+                                                <div class="description">
+                                                    <p class="summary">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco l...</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="grid-item-xs-12 grid-item-sm-6 grid-item-md-4">
+                                <div class="tile-trigger">
+                                    <button class="tile highlight-right sm_highlight-top gradient-green">
+                                        <div class="inner">
+                                            <div class="contents">
+                                                <div class="title flex flex-row sm_flex-column vert-center">
+                                                    <img src="img/icons/information-architecture-icon.svg" alt="" width="100%"/>
                                                     <h3 class="subhead">Information Architecture</h3>
                                                 </div>
                                                 <div class="description">
@@ -399,25 +390,8 @@
                                         <div class="inner">
                                             <div class="contents">
                                                 <div class="title flex flex-row sm_flex-column vert-center">
-                                                    <img src="img/placeholder-icon.svg" alt="" width="100%"/>
-                                                    <h3 class="subhead">Data Analysis</h3>
-                                                </div>
-                                                <div class="description">
-                                                    <p class="summary">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco l...</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="grid-item-xs-12 grid-item-sm-6 grid-item-md-4">
-                                <div class="tile-trigger">
-                                    <button class="tile highlight-right sm_highlight-top gradient-green">
-                                        <div class="inner">
-                                            <div class="contents">
-                                                <div class="title flex flex-row sm_flex-column vert-center">
-                                                    <img src="img/placeholder-icon.svg" alt="" width="100%"/>
-                                                    <h3 class="subhead">Content Strategy</h3>
+                                                    <img src="img/icons/motion-graphics-icon.svg" alt="" width="100%"/>
+                                                    <h3 class="subhead">Motion Graphics</h3>
                                                 </div>
                                                 <div class="description">
                                                     <p class="summary">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco l...</p>
@@ -433,7 +407,7 @@
                                         <div class="inner">
                                             <div class="contents">
                                                 <div class="title flex flex-row sm_flex-column vert-center">
-                                                    <img src="img/placeholder-icon.svg" alt="" width="100%"/>
+                                                    <img src="img/icons/modular-design-icon.svg" alt="" width="100%"/>
                                                     <h3 class="subhead">Modular Design Systems</h3>
                                                 </div>
                                                 <div class="description">
@@ -444,17 +418,52 @@
                                     </button>
                                 </div>
                             </div>
+                            <div class="grid-item-xs-12 grid-item-sm-6 grid-item-md-4">
+                                <div class="tile-trigger">
+                                    <button class="tile highlight-right sm_highlight-top gradient-green">
+                                        <div class="inner">
+                                            <div class="contents">
+                                                <div class="title flex flex-row sm_flex-column vert-center">
+                                                    <img src="img/icons/content-strategy-icon.svg" alt="" width="100%"/>
+                                                    <h3 class="subhead">Content Strategy</h3>
+                                                </div>
+                                                <div class="description">
+                                                    <p class="summary">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco l...</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="grid-item-xs-3 hide sm_block md_hide">&nbsp;</div>
+                            <div class="grid-item-xs-12 grid-item-sm-6 grid-item-md-4">
+                                <div class="tile-trigger">
+                                    <button class="tile highlight-right sm_highlight-top gradient-blue">
+                                        <div class="inner">
+                                            <div class="contents">
+                                                <div class="title flex flex-row sm_flex-column vert-center">
+                                                    <img src="img/icons/data-analysis-icon.svg" alt="" width="100%"/>
+                                                    <h3 class="subhead">Data Analysis</h3>
+                                                </div>
+                                                <div class="description">
+                                                    <p class="summary">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco l...</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </button>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    
+
                     <button class="trigger"><strong>View <span class="expanded">Less</span><span class="collapsed">More</span></strong></button>
                 </div>
-                
+
             </section>
-            
+
             <section id="projects" class="lg_padding-vertical-md xl_padding-vertical-lg">
                 <h2 class="h2 text-align-center margin-bottom-lg lg_margin-bottom-xl">Projects</h2>
-                
+
                 <div class="grid-wrapper">
                     <div class="grid-item-xs-12" id="proj-1">
                         <div class="tile-trigger gradient-red">
@@ -502,12 +511,11 @@
                             </div>
                         </div>
                     </div>
-                    
-                    
+
+
                 </div>
-            
+
             </section>
-            
         </div>
         <script src="js/classie.js"></script>
 		<script src="js/pathLoader.js"></script>
