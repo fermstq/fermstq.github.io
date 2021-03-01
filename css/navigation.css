@@ -77,7 +77,7 @@ header.fixed .logo .logo-container, header.fixed .logo .loading-bar{
     left: 0;
     width: 100vw;
     z-index: 75;
-    margin:0;
+    margin:var(--spacing-sm) 0 0 0;
     padding: 0;
     list-style-type: none;
     visibility: hidden;
