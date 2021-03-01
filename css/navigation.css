@@ -133,12 +133,17 @@ nav [class^="grid-item"]{
     margin: 0 auto;
 }
 
+.logo-container a{
+    position: relative;
+}
+
 .logo{
     width: 100%;
     height: auto;
     position: relative;
     overflow: visible !important;
     right:0.2rem;
+    top: -0.25rem;
 }
 
 .logo .loading-bar{
@@ -269,6 +274,10 @@ button#menu-button.open span:nth-child(3) {
     
     .logo .logo-container, .logo .loading-bar{
         opacity: 1;
+    }
+    
+    .logo{
+        right:-0.15rem;
     }
     
     button#menu-button{

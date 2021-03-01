@@ -20,11 +20,19 @@ body {
 
 h1,h2,h3,h4,h5,h6 {
     margin: 0; 
+    padding: 0.5rem;
+    margin-left: -0.5rem;
     font-weight: normal;
     font-family:'Abril Fatface', serif; 
-    line-height:1;
     letter-spacing: var(--kerning-sm);
-    color: var(--color-black)
+    color: var(--color-black);
+    background: -webkit-linear-gradient(30deg, var(--color-black), var(--color-dark-grey));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+h1 {
+   padding: 0.25rem; 
 }
 
 .h1{
@@ -53,21 +61,32 @@ h3{
 }
 
 p{
-    font-family:'Quicksand', sans-serif;
-    font-weight: var(--medium);
+    font-family:'Montserrat', sans-serif;
+    font-weight: var(--regular);
     color: var(--color-dark-grey);
     letter-spacing: var(--kerning-sm);
-    font-size: var(--font-md); 
+    font-size: var(--font-sm); 
     margin-top: 0;
-    line-height: 1.6;
+    line-height: 1.7;
 }
+
+.summary{
+    font-weight: var(--medium);
+}
+
+.description .summary{
+    text-shadow: 1px 1px 1px var(--color-dark-grey);
+    font-weight: var(--semibold);
+}
+
 
 .prehead{
     font-size: var(--font-xxs);
+    font-family:'Quicksand', sans-serif;
     text-transform: uppercase;
     color: var(--color-medium-grey);
     letter-spacing: var(--kerning-xl);
-    font-weight: 900;
+    font-weight: 700;
     margin-bottom: var(--fluid-spacing-sm)
 }
 
@@ -81,10 +100,10 @@ a:focus{
 }
 
 button {
-  -webkit-user-select: text;  /* Chrome all / Safari all */
-  -moz-user-select: text;     /* Firefox all */
-  -ms-user-select: text;      /* IE 10+ */
-  user-select: text;
+    -webkit-user-select: text;  /* Chrome all / Safari all */
+    -moz-user-select: text;     /* Firefox all */
+    -ms-user-select: text;      /* IE 10+ */
+    user-select: text;
 }
 
 button:focus {
@@ -101,6 +120,7 @@ button.trigger{
     position: relative;
     font-family:'Comfortaa', sans-serif;
     font-weight: 700;
+    box-shadow: var(--shadow-extra-subtle);
 }
 
 button.trigger strong{

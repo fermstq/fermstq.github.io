@@ -83,6 +83,7 @@
     
     /* VISUAL AESTHETIC */ 
     
+    --shadow-extra-subtle: 0 0 2px var(--color-black-15);
     --shadow-subtle: 0 0 5px var(--color-black-15);
     --shadow-element: 0 0 25px var(--color-light-grey);
     --hover-shadow: 0 0 10px var(--color-black-15);
@@ -416,10 +417,6 @@ html.dark-mode:root{
     overflow: hidden;
 }
 
-.round img{
-    transform:scale(1.1);
-}
-
 /* ------ TYPOGRAPHY ------ */
 
 .text-align-center{
@@ -609,6 +606,12 @@ html.dark-mode:root{
 
     .sm_flex-column-reverse{
         flex-direction: column-reverse;
+    }
+    
+    /* COLORS */
+    
+    .sm_color-dark-grey{
+        color: var(--color-dark-grey);
     }
 
     
@@ -909,9 +912,9 @@ html.dark-mode:root{
 
 @media screen and (min-width: 90rem ) {
     
-    /*:root{
-        /* FONT SIZES MAX  
-    
+    :root{
+        /* FONT SIZES MAX */  
+        --font-xxs: 12px;
         --font-xs: 14px;
         --font-sm: 18px;
         --font-md: 22px;
@@ -919,7 +922,6 @@ html.dark-mode:root{
         --font-xl: 48px;
         --font-xxl: 60px;  
     }
-    */ 
 
     .xl_hide{
         display:none;

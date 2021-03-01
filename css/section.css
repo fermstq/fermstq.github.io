@@ -91,7 +91,7 @@ section#skillset .contents img{
 
 section#skillset .contents .description .summary{
     line-height: 1.4;
-    text-shadow: 1px 1px 1px var(--color-dark-grey);
+    font-weight: var(--semibold);
 }
 
 /* ------ PROJECTS ------ */
@@ -113,7 +113,7 @@ section#projects .contents .title .summary{
 }
 
 section#projects .contents .description .summary{
-    font-size: var(--font-md);
+    font-size: var(--font-sm);
 }
 
 section#projects .tile-cta .subhead{
@@ -127,11 +127,12 @@ section#projects .contents{
 section#projects .project-details{
     display: none;
     text-transform: uppercase;
-    font-weight: 900;
     text-align: right;
     letter-spacing: var(--kerning-lg);
     font-size: var(--font-xxs);
     margin-bottom: 0;
+    font-family:'Quicksand', sans-serif;
+    font-weight: 700;
 }
 
 section#projects .prehead{
@@ -180,15 +181,57 @@ section#projects .gradient-blue .project-details a:after{
 
 /* PROJECT IMAGES LANDSCAPE */
 
-section#projects #proj-1 .image.highlight-top .inner::after{
-    background-image: url(../img/ref-img-landscape.jpg);
+section#projects #proj-website-redesign .image.highlight-top .inner::after{
+    background-image: url(../img/proj/website-redesign.jpg);
 }
 
-section#projects #proj-2 .image.highlight-top .inner::after{
+section#projects #proj-30-yr-logo .image.highlight-top .inner::after{
+    background-image: url(../img/proj/30-yr-logo.jpg);
+    background-position: 50% 80%;
+    background-size: 150%;
+}
+
+section#projects #proj-30-yr-logo .active .image.highlight-top .inner::after{
+    background-position: 50% 80%;
+}
+
+
+section#projects #proj-event-support .image.highlight-top .inner::after{
+    background-image: url(../img/proj/event-support.jpg);
+}
+
+section#projects #proj-vbel .image.highlight-top .inner::after{
+    background-image: url(../img/proj/vbel.jpg);
+}
+
+section#projects #proj-email-dev .image.highlight-top .inner::after{
+    background-image: url(../img/proj/nurture-campaigns.jpg);
+}
+
+section#projects #proj-iconography .image.highlight-top .inner::after{
+    background-image: url(../img/proj/icon-poster.jpg);
+}
+
+section#projects #proj-dgs .image.highlight-top .inner::after{
     background-image: url(../img/ref-img-portrait.jpg);
 }
 
+section#projects #proj-wedding .image.highlight-top .inner::after{
+    background-image: url(../img/proj/wedding-signage.jpg);
+}
 
+section#projects #proj-x .image.highlight-top .inner::after{
+    background-image: url(../img/ref-img-portrait.jpg);
+}
+
+/* MOBILE PLUS */
+
+@media screen and (max-width: 28rem ) {
+
+    section#projects .tile-trigger.active .image.highlight-top .inner:after{
+        background-size: cover !important;
+    }
+}
 
 
 /* MOBILE PLUS */
@@ -238,6 +281,10 @@ section#projects #proj-2 .image.highlight-top .inner::after{
     section#projects [id^="proj-"] .title{
         padding: var(--fluid-spacing-sm) var(--fluid-spacing-md); 
     }
+    
+    section#projects #proj-30-yr-logo .tile-trigger.active .image.highlight-top .inner:after{
+        background-size: 150%;
+    }
 
 }
 
@@ -285,6 +332,12 @@ section#projects #proj-2 .image.highlight-top .inner::after{
         border-bottom-left-radius: var(--border-radius-std);
     }
     
+    section#projects #proj-30-yr-logo .image.highlight-top .inner::after{
+        background-image: url(../img/proj/30-yr-logo.jpg);
+        background-position: center;
+        background-size: cover;
+    }
+
     /* section#projects [class^="grid-item"]:nth-child(odd) .tile-trigger:before{
         left: 0;
         border-top-left-radius: var(--border-radius-std);
@@ -310,7 +363,7 @@ section#projects #proj-2 .image.highlight-top .inner::after{
     }
     
     section#projects [id^="proj-"] button{
-        min-height: 25rem;
+        min-height: 28rem;
     }
     
     section#projects [id^="proj-"] .title{
@@ -410,13 +463,7 @@ section#projects #proj-2 .image.highlight-top .inner::after{
     
     /* PROJECT IMAGES PORTRAIT */
     
-    section#projects #proj-1 .image.highlight-top .inner::after{
-        background-image: url(../img/ref-img-portrait.jpg);
-    }
 
-    section#projects #proj-2 .image.highlight-top .inner::after{
-        background-image: url(../img/ref-img-landscape.jpg);
-    }
 
 
 }
@@ -445,10 +492,6 @@ section#projects #proj-2 .image.highlight-top .inner::after{
     
     /* ------ PROJECTS ------ */
     
-    section#projects [id^="proj-"] button{
-        min-height: 30rem;
-    }
-    
     section#projects [id^="proj-"] .title{
         padding: var(--fluid-spacing-md) var(--spacing-xl);
     }
@@ -472,9 +515,6 @@ section#projects #proj-2 .image.highlight-top .inner::after{
     
     /* ------ SKILLSETS ------ */
     
-    section#skillset .contents img{
-        max-width: 6.5rem;
-    }
     
     /*section#skillset .accordion.close > .contents{
         max-height: 1000px;
