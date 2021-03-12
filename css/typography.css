@@ -26,9 +26,6 @@ h1,h2,h3,h4,h5,h6 {
     font-family:'Abril Fatface', serif; 
     letter-spacing: var(--kerning-sm);
     color: var(--color-black);
-    background: -webkit-linear-gradient(30deg, var(--color-black), var(--color-dark-grey));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
 }
 
 h1 {
@@ -47,6 +44,12 @@ h2{
 h3{
     font-size: var(--font-lg);
     line-height: 1.2;
+}
+
+.gradient{
+    background: -webkit-linear-gradient(30deg, var(--color-black), var(--color-dark-grey));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 
