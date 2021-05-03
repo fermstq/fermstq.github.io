@@ -1,0 +1,581 @@
+section{
+    padding: var(--fluid-spacing-md) 0;
+    -webkit-transition: padding var(--normal-speed) var(--easy-ease);
+    -moz-transition: padding var(--normal-speed) var(--easy-ease);
+    -o-transition: padding var(--normal-speed) var(--easy-ease);
+    transition: padding var(--normal-speed) var(--easy-ease);
+}
+
+section .tile div{
+    -webkit-transition: opacity var(--normal-speed) ease-in-out, transform var(--normal-speed) ease-in-out;
+    -moz-transition: opacity var(--normal-speed) ease-in-out, transform var(--normal-speed) ease-in-out;
+    -o-transition: opacity var(--normal-speed) ease-in-out, transform var(--normal-speed) ease-in-out;
+    transition: opacity var(--normal-speed) ease-in-out, transform var(--normal-speed) ease-in-out;
+}
+
+section div::before{
+    -webkit-transition: opacity var(--normal-speed) ease-in-out, transform var(--normal-speed) ease-in-out;
+    -moz-transition: opacity var(--normal-speed) ease-in-out, transform var(--normal-speed) ease-in-out;
+    -o-transition: opacity var(--normal-speed) ease-in-out, transform var(--normal-speed) ease-in-out;
+    transition: opacity var(--normal-speed) ease-in-out, transform var(--normal-speed) ease-in-out;
+}
+
+section div::after{
+    -webkit-transition: opacity var(--normal-speed) ease-in-out, transform var(--normal-speed) ease-in-out;
+    -moz-transition: opacity var(--normal-speed) ease-in-out, transform var(--normal-speed) ease-in-out;
+    -o-transition: opacity var(--normal-speed) ease-in-out, transform var(--normal-speed) ease-in-out;
+    transition: opacity var(--normal-speed) ease-in-out, transform var(--normal-speed) ease-in-out;
+}
+
+
+section#about .contents{
+    padding: 0;
+}
+
+
+/* ------ ABOUT ------ */
+
+section#about .tile::before, section#about .tile::after, section#about .tile .inner::after{
+    opacity:0;
+} 
+
+
+/* ------ SKILLSETS ------ */
+
+section#skillset .tile .subhead{
+    text-align: left;
+}
+
+section#skillset #color-key{
+    align-items: center;
+    display: flex;
+}
+
+section#skillset #color-key .wrapper{
+    justify-content: center;
+    display: flex;
+    width: auto;
+}
+
+section#skillset #color-key .subhead{
+    margin-bottom: var(--spacing-xs);
+    position: relative;
+    margin-left: 1.75rem;
+    
+}
+
+section#skillset #color-key .subhead:before{
+    content: '';
+    height: 1rem;
+    width: 1rem;
+    border-radius: 100%;
+    position: absolute;
+    top:3px;
+    left: -1.75rem;
+}
+
+section#skillset #color-key .subhead:nth-of-type(1):before{
+    background: var(--color-light-red);
+}
+section#skillset #color-key .subhead:nth-of-type(2):before{
+    background: var(--color-light-green);
+}
+section#skillset #color-key .subhead:nth-of-type(3):before{
+    background: var(--color-light-blue);
+}
+
+section#skillset .contents img{
+    max-width: 5.5rem;
+    margin-right: var(--fluid-spacing-sm);
+}
+
+section#skillset .contents .description .summary{
+    line-height: 1.4;
+    font-weight: var(--semibold);
+}
+
+/* ------ PROJECTS ------ */
+
+section#projects .grid-wrapper{
+    grid-row-gap: var(--fluid-spacing-md)
+}
+
+section#projects [id^="proj-"] .title{
+    margin-top: var(--spacing-sm);
+    padding: var(--fluid-spacing-sm);
+}
+
+section#projects .contents .title .summary{
+    opacity: 1;
+    text-align: left;
+    text-shadow: none;
+    color: var(--color-dark-grey);
+}
+
+section#projects .contents .description .summary{
+    font-size: var(--font-sm);
+}
+
+section#projects .tile-cta .subhead{
+    color: var(--color-white)
+}
+
+section#projects .contents{
+    text-align: left;
+}
+
+section#projects .project-details{
+    display: none;
+    text-transform: uppercase;
+    text-align: right;
+    letter-spacing: var(--kerning-lg);
+    font-size: var(--font-xxs);
+    margin-bottom: 0;
+    font-family:'Quicksand', sans-serif;
+    font-weight: 700;
+}
+
+section#projects .prehead{
+    display: none;
+}
+
+
+section#projects .gradient-red .project-details{
+    color: var(--color-red);
+}
+
+section#projects .gradient-green .project-details{
+    color: var(--color-green);
+}
+
+section#projects .gradient-blue .project-details{
+    color: var(--color-blue);
+}
+
+.project-details a{
+    position: relative;
+}
+
+.project-details a:after{
+    content:'';
+    display: block;
+    width: 100%;
+    height: 2px;
+    position: absolute;
+    bottom: 1px;
+}
+
+section#projects .gradient-red .project-details a:after{
+    background-color: var(--color-light-red);
+}
+
+section#projects .gradient-green .project-details a:after{
+    background-color: var(--color-light-green);
+}
+
+section#projects .gradient-blue .project-details a:after{
+    background-color: var(--color-light-blue);
+}
+
+
+
+/* PROJECT IMAGES LANDSCAPE */
+
+section#projects #proj-website-redesign .image.highlight-top .inner::after{
+    background-image: url(../img/proj/website-redesign.jpg);
+}
+
+section#projects #proj-30-yr-logo .image.highlight-top .inner::after{
+    background-image: url(../img/proj/30-yr-logo.jpg);
+    background-position: 50% 80%;
+    background-size: 150%;
+}
+
+section#projects #proj-30-yr-logo .active .image.highlight-top .inner::after{
+    background-position: 50% 80%;
+}
+
+
+section#projects #proj-event-support .image.highlight-top .inner::after{
+    background-image: url(../img/proj/event-support.jpg);
+}
+
+section#projects #proj-vbel .image.highlight-top .inner::after{
+    background-image: url(../img/proj/vbel.jpg);
+}
+
+section#projects #proj-email-dev .image.highlight-top .inner::after{
+    background-image: url(../img/proj/nurture-campaigns.jpg);
+}
+
+section#projects #proj-dgs .image.highlight-top .inner::after{
+    background-image: url(../img/proj/digipen-game-studios.jpg);
+}
+
+section#projects #proj-iconography .image.highlight-top .inner::after{
+    background-image: url(../img/proj/icon-poster.jpg);
+}
+
+section#projects #proj-dgs .image.highlight-top .inner::after{
+    background-image: url(../img/proj/digipen-game-studios.jpg);
+}
+
+section#projects #proj-wedding .image.highlight-top .inner::after{
+    background-image: url(../img/proj/wedding-signage.jpg);
+}
+
+section#projects #proj-x .image.highlight-top .inner::after{
+    background-image: url(../img/ref-img-portrait.jpg);
+}
+
+/* MOBILE PLUS */
+
+@media screen and (max-width: 28rem ) {
+
+    section#projects .tile-trigger.active .image.highlight-top .inner:after{
+        background-size: cover !important;
+    }
+}
+
+
+/* MOBILE PLUS */
+
+@media screen and (min-width: 35rem ) {
+    
+    section{
+        padding: var(--spacing-md) 0;
+    }
+    
+    
+    /* ------ ABOUT ------ */
+    
+    section#about .tile::before, section#about .tile::after, section#about .tile .inner::after{
+        opacity:1;
+
+    } 
+    
+    section#about .inner{
+        padding-top: var(--spacing-md);
+        padding-bottom: var(--spacing-md);
+    }
+    
+    section#about .contents{
+        padding:var(--spacing-sm);
+        padding-right: var(--spacing-md);
+    }
+    
+    /* ------ SKILLSETS ------ */
+    
+    section#skillset .contents img{
+        max-width: 8rem;
+        padding: var(--spacing-xs);
+    }
+    
+    section#skillset .tile .subhead{
+        text-align: center;
+    }
+    
+    section#skillset .contents img{
+        margin-right:0;
+        margin-bottom: var(--spacing-sm);
+    }
+    
+    /* ------ PROJECTS ------ */
+
+    section#projects [id^="proj-"] .title{
+        padding: var(--fluid-spacing-sm) var(--fluid-spacing-md); 
+    }
+    
+    section#projects #proj-30-yr-logo .tile-trigger.active .image.highlight-top .inner:after{
+        background-size: 150%;
+    }
+
+}
+
+
+
+/* TABLET */
+
+@media screen and (min-width: 55rem ) {
+    
+    section{
+        padding: var(--spacing-lg) 0;
+    }
+    
+    /* ------ ABOUT ------ */
+    
+    html.no-cssgrid section#about .grid-wrapper-lg .grid-item-md-1{
+        display: none;
+    }
+    
+    html.no-cssgrid section#about .grid-item-md-8.padding-sm{
+        padding: 1rem 2rem 0; 
+    }
+
+    /* ------ SKILLSETS ------ */
+    
+    section#skillset #color-key .wrapper{
+        width: 100%;
+    }
+    
+    section#skillset #color-key .subhead:nth-of-type(1), section#skillset #color-key .subhead:nth-of-type(2){
+        margin-right: calc(1rem + 2vw);
+    }
+    
+    /* ------ PROJECTS ------ */
+    
+    section#projects #proj-website-redesign .active.hi-res .image.highlight-top .inner::after{
+        background-image: url(../img/proj/website-redesign_hires.jpg);
+    }
+
+    section#projects #proj-30-yr-logo .image.highlight-top .inner::after{
+        background-position: center;
+        background-size: cover;
+    }
+    
+    section#projects #proj-30-yr-logo .active.hi-res .image.highlight-top .inner::after{
+        background-image: url(../img/proj/30-yr-logo_hires.jpg);
+    }
+    
+    section#projects #proj-event-support .active.hi-res .image.highlight-top .inner::after{
+        background-image: url(../img/proj/event-support_hires.jpg);
+    }
+
+    section#projects #proj-vbel .active.hi-res .image.highlight-top .inner::after{
+        background-image: url(../img/proj/vbel_hires.jpg);
+    }
+
+    section#projects #proj-email-dev .active.hi-res .image.highlight-top .inner::after{
+        background-image: url(../img/proj/nurture-campaigns_hires.jpg);
+    }
+
+    section#projects #proj-dgs .active.hi-res .image.highlight-top .inner::after{
+        background-image: url(../img/proj/digipen-game-studios_hires.jpg);
+    }
+
+    section#projects #proj-iconography .active.hi-res .image.highlight-top .inner::after{
+        background-image: url(../img/proj/icon-poster_hires.jpg);
+    }
+
+
+    /*section#projects #proj-wedding .image.highlight-top .inner::after{
+        background-image: url(../img/proj/wedding-signage_hires.jpg);
+    }*/
+    
+    section#projects .tile-trigger:before{
+        content:'';
+        height:100%;
+        width:1rem;
+        top: 0;
+        position: absolute;
+        z-index: 100;
+        display: block;
+        border-top-left-radius: var(--border-radius-std);
+        border-bottom-left-radius: var(--border-radius-std);
+    }
+
+
+    /* section#projects [class^="grid-item"]:nth-child(odd) .tile-trigger:before{
+        left: 0;
+        border-top-left-radius: var(--border-radius-std);
+        border-bottom-left-radius: var(--border-radius-std);
+    }
+    
+    section#projects [class^="grid-item"]:nth-child(even) .tile-trigger:before{
+        right: 0;
+        border-top-right-radius: var(--border-radius-std);
+        border-bottom-right-radius: var(--border-radius-std);
+    }*/
+    
+    section#projects .tile-trigger.gradient-red:before{
+        background-image: var(--gradient-red);
+    }
+    
+    section#projects .tile-trigger.gradient-green:before{
+        background-image: var(--gradient-green);
+    }
+    
+    section#projects .tile-trigger.gradient-blue:before{
+        background-image: var(--gradient-blue);
+    }
+    
+    section#projects [id^="proj-"] button{
+        min-height: 28rem;
+    }
+    
+    section#projects [id^="proj-"] .title{
+        padding: var(--fluid-spacing-md) var(--fluid-spacing-lg);
+    }
+    
+    section#projects .description .summary{
+        padding: 0 var(--fluid-spacing-lg);
+    }
+    
+    section#projects [id^="proj-"] .tile-cta{
+        background: none;
+    }
+    
+    section#projects .contents{
+        height: 100%;
+        display: flex;
+        position: absolute;
+        top: 0;
+        padding-top: 0;
+        padding-bottom: 0;
+        justify-content: space-between;
+    }
+    
+    section#projects .contents .project-details{
+        display: flex;
+        padding: 0 var(--fluid-spacing-lg);
+        margin-bottom: var(--spacing-sm);
+        padding-bottom: var(--fluid-spacing-md);
+        justify-content: flex-end;
+    }
+    
+    section#projects .prehead{
+        display: block;
+    }
+    
+    section#projects .tile-cta{
+        position: absolute;
+        left: var(--fluid-spacing-lg);
+        bottom: var(--fluid-spacing-lg);
+    }
+    
+    section#projects .tile-cta a .subhead{
+        font-size: var(--font-xxs)
+    }
+    
+
+    section#projects .tile-cta a{
+        background: none;
+        transform: translateX(1rem);
+        height: auto;
+    }
+    
+    section#projects .tile-cta a::after{
+        content:'';
+        height: 2px;
+        position: absolute;
+        bottom: -5px;
+        width: 0%;
+        box-shadow:inset 0px 0px 2px 0px var(--color-white);
+        -webkit-transition: width var(--normal-speed) var(--easy-ease);
+        -moz-transition: width var(--normal-speed) var(--easy-ease);
+        -o-transition: width var(--normal-speed) var(--easy-ease);
+        transition: width var(--normal-speed) var(--easy-ease);
+        
+    }
+    
+    section#projects .tile-cta a:hover::after, section#projects .tile-cta a:focus::after{
+        width: 100%;    
+    }
+    
+    section#projects .gradient-red .tile-cta a:after{
+        background-color: var(--color-red)
+    }
+    
+    section#projects .gradient-green .tile-cta a:after{
+        background-color: var(--color-green)
+    }
+    
+    section#projects .gradient-blue .tile-cta a:after{
+        background-color: var(--color-blue)
+    }
+
+    
+    section#projects .gradient-red .tile-cta .subhead{
+        color: var(--color-red)
+    }
+    
+    section#projects .gradient-green .tile-cta .subhead{
+        color: var(--color-green)
+    }
+    
+    section#projects .gradient-blue .tile-cta .subhead{
+        color: var(--color-blue)
+    }
+    
+    
+    /* PROJECT IMAGES PORTRAIT */
+    
+
+
+
+}
+
+
+
+/* DESKOP */
+
+@media screen and (min-width: 70rem ) {
+    
+    
+    section{
+        padding: var(--spacing-xl) 0;
+    }
+    
+    .tile::before{
+        opacity:1;
+
+    } 
+    
+    /* ------ SKILLSETS ------ */
+    
+    section#skillset #color-key .subhead:nth-of-type(1), section#skillset #color-key .subhead:nth-of-type(2){
+        margin-right: calc(2rem + 2.5vw);
+    }
+    
+    /* ------ PROJECTS ------ */
+    
+    section#projects [id^="proj-"] .title{
+        padding: var(--fluid-spacing-md) var(--spacing-xl);
+    }
+    
+    section#projects [id^="proj-"] .project-details{
+        padding: 0 var(--spacing-xl) var(--fluid-spacing-md) var(--spacing-xl);
+    }
+    
+    section#projects .tile-cta{
+        left: var(--spacing-xl);
+    }
+    
+    
+}
+
+
+
+/* DESKTOP PLUS */
+
+@media screen and (min-width: 90rem ) {
+    
+    /* ------ SKILLSETS ------ */
+    
+    
+    /*section#skillset .accordion.close > .contents{
+        max-height: 1000px;
+        overflow: visible;
+        -webkit-transition: none;
+        -moz-transition: none;
+        -o-transition: none;
+        transition: none;
+    }
+    
+    section#skillset .accordion.close > .contents > div{
+        -webkit-animation: fadeInDown var(--fast-speed) var(--easy-ease) both;
+        animation-name: fadeInDown;
+        animation-duration: var(--fast-speed);
+        animation-timing-function: var(--ease-ease);
+        animation-fill-mode: both;
+    }
+    
+    section#skillset .accordion button.trigger{
+        display: none;
+    }*/
+    
+    section#skillset #color-key .subhead:nth-of-type(1), section#skillset #color-key .subhead:nth-of-type(2){
+        margin-right: 6rem;
+    }
+    
+}
