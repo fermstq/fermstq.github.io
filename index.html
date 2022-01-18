@@ -29,7 +29,7 @@
         <meta name="twitter:image:width" content="1024">
         <meta name="twitter:image:height" content="512">
 		<link rel="stylesheet" type="text/css" href="css/normalize.css" />
-		<link rel="stylesheet" type="text/css" href="css/compiled.css" />
+		<link rel="stylesheet" type="text/css" href="css/compile-unminified.css" />
 		<script src="js/modernizr.js"></script>
         <script src="js/jquery-3.2.1.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
@@ -173,12 +173,12 @@
 
             <!-- opening content -->
             <section id="about">
-                <div class="relative tile highlight-right gradient-red">
+                <div class="relative tile highlight-right gradient-red in-view animate">
                     <div class="inner">
                         <div class="contents padding-0 sm_padding-sm">
                             <div class="grid-wrapper-lg vert-center">
                                 <div class="grid-item-xs-4 grid-item-md-1"></div>
-                                <div class="grid-item-xs-16 grid-item-md-8 padding-sm">
+                                <div class="grid-item-xs-16 grid-item-md-8 padding-sm reveal-up md_reveal-left" data-delay="1">
                                     <div class="shadow">
                                         <div class="bg-gradient-red-45 round">
                                             <img src="img/quin-gradient.png" alt="Portrait of Seattle Designer Quin Fermstad" width="100%"/>
@@ -187,22 +187,22 @@
                                 </div>
                                 <div class="grid-item-xs-4 grid-item-md-1"></div>
                                 <div class="grid-item-xs-24 grid-item-md-12 lg_padding-md lg_padding-vertical-sm">
-                                    <h2 class="text-align-center md_text-align-left margin-bottom-sm gradient"><span class="h1">Hi, I'm Quin!&nbsp;</span><span class="block subhead font-size-md">Welcome to my portfolio<span class="sr-only">.</span></span>
+                                    <h2 class="text-align-center md_text-align-left margin-bottom-sm gradient reveal-up" data-delay="2"><span class="h1">Hi, I'm Quin!&nbsp;</span><span class="block subhead font-size-md">Welcome to my portfolio<span class="sr-only">.</span></span>
                                     </h2>
-                                    <p class="text-align-center md_text-align-left margin-bottom-0 sm_padding-md sm_padding-vertical-0 md_padding-0 color-charcoal-grey sm_color-dark-grey">I’m a multifaceted designer driven by creative problem solving. My eagerness to learn has expanded my design approach and landed me in dynamic roles across a variety of&nbsp;projects.</p>
+                                    <p class="text-align-center md_text-align-left margin-bottom-0 sm_padding-md sm_padding-vertical-0 md_padding-0 color-charcoal-grey sm_color-dark-grey reveal-up" data-delay="3">I’m a multifaceted designer driven by creative problem solving. My eagerness to learn has expanded my design approach and landed me in dynamic roles across a variety of&nbsp;projects.</p>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
-            <section id="skillset">
-                <h2 class="h2 text-align-center margin-bottom-md gradient">Skillsets</h2>
+            <section id="skillset" class="in-view">
+                <h2 class="h2 text-align-center margin-bottom-md gradient reveal-up">Skillsets</h2>
                 <div id="color-key" class="flex-column md_flex-row margin-bottom-md xl_margin-bottom-lg">
                     <div class="wrapper flex-column md_flex-row">
-                        <p class="subhead">Passionate Creative<span class="sr-only">.</span></p>
-                        <p class="subhead">User-Centered Mindset<span class="sr-only">.</span></p>
-                        <p class="subhead">Dynamic Strategist<span class="sr-only">.</span></p>
+                        <p class="subhead reveal-up" data-delay="1">Passionate Creative<span class="sr-only">.</span></p>
+                        <p class="subhead reveal-up" data-delay="2">User-Centered Mindset<span class="sr-only">.</span></p>
+                        <p class="subhead reveal-up" data-delay="3">Dynamic Strategist<span class="sr-only">.</span></p>
                     </div>
                 </div>
                 <div class="grid-wrapper margin-bottom-sm">
@@ -476,7 +476,7 @@
             </section>
 
             <section id="projects" class="lg_padding-vertical-md xl_padding-vertical-lg">
-                <h2 class="h2 text-align-center margin-bottom-lg lg_margin-bottom-xl gradient">Projects</h2>
+                <h2 class="h2 text-align-center margin-bottom-lg gradient">Projects</h2>
 
                 <div class="grid-wrapper">
                     <div class="grid-item-xs-12" id="proj-website-redesign">
@@ -487,7 +487,7 @@
                                         <div class="title">
                                             <p class="prehead">AUX, UI, IA, IxD, Frontend Dev, CMS Customizer</p>
                                             <h3 class="margin-bottom-sm">Website Redesign</h3>
-                                            <p class="summary">Sole designer in an overhaul of DigiPen’s existing web properties resulting in a 62% increase in lead generation the following year. This redesign contributed to more strategic engagement tracking, simplified architecture, improved SEO, responsive and accessible layouts and content structures, a rebranded theme, interactions, and a design system used across DigiPen’s international&nbsp;campuses.
+                                            <p class="summary">Sole designer in an overhaul of DigiPen’s existing web properties resulting in a 62% increase in lead generation the following year. This redesign contributed to more strategic engagement tracking, simplified architecture, improved SEO, responsive and accessible layouts, refined content structures, a rebranded theme,  interaction emphasis, and a design system used across DigiPen’s international&nbsp;campuses.
                                             </p>
                                         </div>
                                         <p class="project-details"><span class="sr-only">Project timeline: </span>2016 - 2018</p>
@@ -526,11 +526,11 @@
                                 <div class="inner">
                                     <div class="contents">
                                         <div class="title">
-                                            <p class="prehead">Form Development, CRM Administration</p>
+                                            <p class="prehead">Form Development, CRM Administration, UX</p>
                                             <h3 class="margin-bottom-sm">DigiPen Event Support</h3>
                                             <p class="summary">Sole developer of forms, email templates, and automations within DigiPen’s website and CRM to validate form submissions and automate registration processes to remove manual processes, mitigate human errors during bulk data imports, automate confirmation and reminder emails, and display real-time registration data to event dashboards and email suppression&nbsp;lists.</p>
                                         </div>
-                                        <p class="project-details"><span class="sr-only">Project timeline: </span>2016 - 2018, 2020 - 2021</p>
+                                        <p class="project-details"><span class="sr-only">Project timeline: </span>2016 - 2018,  2020 - 2021</p>
                                     </div>
                                 </div>
 
@@ -546,7 +546,7 @@
                                 <div class="inner">
                                     <div class="contents">
                                         <div class="title">
-                                            <p class="prehead">Branding, Logo Design, Frontend Development</p>
+                                            <p class="prehead">Branding, Logo Design, Frontend Dev</p>
                                             <h3 class="margin-bottom-sm">DigiPen Game Studios</h3>
                                             <p class="summary">A quick turnaround branding project for DigiPen’s Singapore campus to announce a publishing platform that would complete their three pronged approach to a localized game industry - research, education, and development. In a two week push, I produced a responsive logo, brand guidelines, and microsite to announce their new venture and collect proposals for independent game&nbsp;developers.</p>
                                         </div>
@@ -566,7 +566,7 @@
                                 <div class="inner">
                                     <div class="contents">
                                         <div class="title">
-                                            <p class="prehead">Email Marketing, Frontend Development</p>
+                                            <p class="prehead">Email Marketing, Frontend Dev</p>
                                             <h3 class="margin-bottom-sm">Nurture Campaigns</h3>
                                             <p class="summary">Sole developer of a series of progressively enhanced email templates with branded modular components that render consistently across the spectrum of email service providers, configuration of campaign automations, and drafting automation strategy proposals before executing system customizations to enhance tracking, data collection, and content&nbsp;routing.</p>
                                         </div>
@@ -646,11 +646,65 @@
             </section>
             <section id="projects" class="lg_padding-vertical-md xl_padding-vertical-lg">
                 
-                <p class="text-align-center font-size-xs">&copy; Fermstad Design 2021</p>
+                <p class="text-align-center font-size-xs">&copy; Fermstad Design 2022</p>
             </section>
         </div>
         <script src="js/classie.js"></script>
 		<script src="js/pathLoader.js"></script>
         <script src="js/scripts.js"></script>
+        <script>
+            (function(){
+                function debounce(fn, ms) { 
+                    var time = null;
+                    return function() {
+                        var a = arguments, t = this;
+                        clearTimeout(time);
+                        time = setTimeout(function() { fn.apply(t, a); }, ms);
+                        }
+                    }
+                function throttle(fn, ms) { 
+                    var time, last = 0;
+                    return function() {
+                        var a = arguments, t = this, now = +(new Date), exe = function() { last = now; fn.apply(t, a); };
+                        clearTimeout(time);
+                        (now >= last + ms) ? exe() : time = setTimeout(exe, ms);
+                        }
+                    }
+                function hasClass(el, cls) {
+                    if (el.className.match('(?:^|\\s)'+cls+'(?!\\S)')) { return true; } 
+                    }
+                function addClass(el, cls) {
+                    if (!el.className.match('(?:^|\\s)'+cls+'(?!\\S)')) { el.className += ' '+cls; } 
+                    }
+                function delClass(el, cls) {
+                    el.className = el.className.replace(new RegExp('(?:^|\\s)'+cls+'(?!\\S)'),'');
+                    }
+
+
+                function elementFromTop(elem, classToAdd, distanceFromTop, unit) {
+                    var winY = window.innerHeight || document.documentElement.clientHeight, 
+                    elemLength = elem.length, distTop, distPercent, distPixels, distUnit, i;
+                    for (i = 0; i < elemLength; ++i) {
+                        distTop = elem[i].getBoundingClientRect().top;
+                        distPercent = Math.round((distTop / winY) * 100);
+                        distPixels = Math.round(distTop);
+                        distUnit = unit == 'percent' ? distPercent : distPixels;
+                        if (distUnit <= distanceFromTop) { addClass(elem[i], classToAdd); }
+                        }
+                    }
+                // params: element, classes to add, distance from top, unit ('percent' or 'pixels')
+
+                window.addEventListener('scroll', throttle(function() {
+                    elementFromTop(document.querySelectorAll('.in-view'),  'animate',  90, 'percent'); 
+
+                    }, 100), false);
+
+                window.addEventListener('resize', debounce(function() {
+                    elementFromTop(document.querySelectorAll('.in-view'),  'animate',  90, 'percent'); 
+
+                    }, 100), false);
+
+                })();
+            </script>
     </body>
 </html>
